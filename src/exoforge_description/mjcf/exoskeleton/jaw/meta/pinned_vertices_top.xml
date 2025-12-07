@@ -1,0 +1,10 @@
+<!-- Vertex extraction metadata:
+     timestamp: 2025-09-19 18:42:30
+     model_file: jaw_exo_model.xml
+     plane_normal: [0.0125, 0.0, 0.9999]
+     plane_offset: 0.05236586
+     total_vertices: 651
+     pinned_vertices: 16
+     plane_equation: 0.013*x + 0.000*y + 1.000*z + 0.052 > 0
+-->
+<pin id="14 15 273 274 275 276 277 278 344 345 591 592 593 594 595 596"/> <!-- 16 vertices pinned -->

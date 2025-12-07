@@ -1,0 +1,15 @@
+├── exosim_interfaces/                 # ROS2 message definitions
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── msg/
+│   │   │   ├── ExoskeletonState.msg
+│   │   │   ├── SafetyStatus.msg
+│   │   │   ├── TherapyCommand.msg         # TMD-specific
+│   │   │   └── ForceVector.msg
+│   │   ├── srv/
+│   │   │   ├── EmergencyStop.srv
+│   │   │   ├── CalibrateSensors.srv
+│   │   │   └── ConfigureTherapy.srv       # TMD-specific
+│   │   └── action/
+│   │       ├── TherapySession.action      # TMD therapy sessions
+│   │       └── MotionSequence.action

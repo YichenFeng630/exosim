@@ -1,0 +1,124 @@
+<mujoco model="TMJDiscCollisionTest_v1.0.0">
+
+  <!-- Memory / sizes -->
+  <size memory="100M" />
+
+  <!-- Simulation options (copied core values from reference) -->
+  <option
+    timestep="1e-4"
+    apirate="100"
+    gravity="0 0 -9.81"
+    o_solref="0.02 1"
+    o_solimp="0.9 0.95 0.001 0.5 2"
+    o_friction="1 0.005 0.0001"
+    integrator="implicitfast"
+    solver="Newton"
+    iterations="100"
+    tolerance="1e-8"
+    ls_iterations="50"
+    ls_tolerance="0.01"
+  >
+    <flag
+      constraint="enable"
+      equality="enable"
+      frictionloss="enable"
+      limit="enable"
+      contact="enable"
+      spring="enable"
+      gravity="enable"
+      warmstart="enable"
+      actuation="enable"
+      sensor="enable"
+      midphase="enable"
+      multiccd="enable"
+    />
+  </option>
+
+  <compiler
+    coordinate="local"
+    angle="degree"
+    meshdir="../../meshes/"
+    texturedir="../../textures/"
+    autolimits="true"
+    eulerseq="xyz"
+  />
+
+  <visual>
+    <global fovy="35" />
+    <headlight diffuse="1 1 1" />
+    <scale contactwidth="0.001" contactheight="0.1" forcewidth="0.01" />
+  </visual>
+
+  <!-- Assets: only the disc mesh -->
+  <!-- <asset>
+    <mesh name="tmj_disc_left_mesh" file="anatomical/jaw/collision/discs/tmj_disc_left.fTetWild.msh" />
+  </asset> -->
+
+  <worldbody>
+    <!-- Light -->
+    <light name="main_light" pos="0 0 0.3" dir="0 0 -1" diffuse="0.8 0.8 0.8" />
+
+    <!-- Ground plane -->
+    <body name="ground" pos="0 0 0">
+      <geom
+        name="ground_plane"
+        type="plane"
+        size="0.5 0.5 0.005"
+        pos="0 0 0"
+        rgba="0.6 0.6 0.6 1"
+        contype="1"
+        conaffinity="1"
+        condim="3"
+        friction="1 0.005 0.0001"
+        solref="0.02 1"
+        solimp="0.9 0.95 0.001 0.5 2"
+      />
+    </body>
+
+    <!-- Single TMJ disc flexcomp -->
+    <flexcomp
+      name="tmj_disc_left_flexcomp"
+      dim="3"
+      dof="trilinear"
+      type="gmsh"
+      mass="0.0023"
+      inertiabox="0.005"
+      file="anatomical/jaw/collision/discs/tmj_disc_left.fTetWild.msh"
+      pos="0 0 0.1"
+      quat="1 0 0 0"
+      radius="1e-6"
+      rgba="0.0 0.0 0.8 1.0"
+    >
+      <contact
+        internal="false"
+        selfcollide="none"
+        vertcollide="false"
+        activelayers="1"
+        contype="1"
+        conaffinity="1"
+        condim="3"
+        friction="0.1 0.005 0.0001"
+        solref="0.02 1"
+        solimp="0.0 0.95 0.001 0.5 2"
+        priority="1"
+        margin="0"
+        gap="0"
+      />
+      <elasticity
+        young="1e3"
+        poisson="0.3"
+        damping="0.1"
+        elastic2d="both"
+      />
+      <!-- <edge
+        equality="true"
+        solref="-1e-8 -10"
+        solimp="0.95 0.99 0.001 0.5 2"
+        damping="0.1"
+      /> -->
+    </flexcomp>
+  </worldbody>
+
+  <!-- No actuators, tendons, or sensors needed -->
+
+</mujoco>

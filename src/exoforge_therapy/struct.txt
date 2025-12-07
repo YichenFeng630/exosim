@@ -1,0 +1,27 @@
+├── exosim_therapy/                   # Rehabilitation protocols
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── include/exosim_therapy/
+│   │   │   ├── therapy_protocols.hpp
+│   │   │   ├── patient_assessment.hpp
+│   │   │   └── progress_tracking.hpp
+│   │   ├── src/
+│   │   │   ├── tmd_protocols.cpp         # TMD-specific
+│   │   │   ├── therapy_session.cpp
+│   │   │   └── progress_analysis.cpp
+│   │   ├── exosim_therapy/
+│   │   │   ├── __init__.py
+│   │   │   ├── tmd_therapy.py
+│   │   │   ├── session_manager.py
+│   │   │   └── assessment_tools.py
+│   │   ├── config/
+│   │   │   ├── therapy_protocols.yaml
+│   │   │   ├── tmd_treatment_plans.yaml
+│   │   │   └── patient_profiles.yaml
+│   │   ├── data/
+│   │   │   ├── treatment_templates/
+│   │   │   └── assessment_forms/
+│   │   └── clinical_tools/
+│   │       ├── patient_questionnaire.py
+│   │       ├── progress_reporter.py
+│   │       └── clinician_interface.py

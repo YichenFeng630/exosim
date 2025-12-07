@@ -1,0 +1,36 @@
+├── exosim_jaw/                   # Jaw exoskeleton
+│       │   ├── package.xml
+│       │   ├── CMakeLists.txt
+│       │   ├── include/exosim_jaw/
+│       │   │   ├── jaw_exoskeleton.hpp
+│       │   │   ├── tmj_model.hpp
+│       │   │   └── tmd_controller.hpp
+│       │   ├── src/
+│       │   │   ├── jaw_exoskeleton.cpp
+│       │   │   ├── tmj_kinematics.cpp
+│       │   │   └── therapy_controller.cpp
+│       │   ├── exosim_jaw/
+│       │   │   ├── __init__.py
+│       │   │   ├── jaw_interface.py
+│       │   │   ├── tmd_protocols.py
+│       │   │   └── clinical_interface.py
+│       │   ├── models/
+│       │   │   ├── jaw_patient_models/    # Patient-specific models
+│       │   │   ├── therapy_scenarios/
+│       │   │   └── validation_cases/
+│       │   ├── config/
+│       │   │   ├── jaw_parameters.yaml
+│       │   │   ├── tmd_therapy_config.yaml
+│       │   │   └── patient_profiles.yaml
+│       │   ├── launch/
+│       │   │   ├── jaw_therapy.launch.py
+│       │   │   ├── jaw_simulation.launch.py
+│       │   │   └── clinical_session.launch.py
+│       │   ├── clinical_tools/
+│       │   │   ├── patient_assessment.py
+│       │   │   ├── therapy_planner.py
+│       │   │   └── progress_tracker.py
+│       │   └── test/
+│       │       ├── test_jaw_kinematics.cpp
+│       │       ├── test_tmd_therapy.py
+│       │       └── clinical_validation/

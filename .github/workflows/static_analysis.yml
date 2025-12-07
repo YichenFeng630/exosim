@@ -1,0 +1,29 @@
+name: Static Analysis
+on: #[push, pull_request]
+
+jobs:
+  clang-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Clang Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-tidy clang-format cppcheck
+          
+      - name: Run Clang-Tidy
+        run: |
+          find src/ -name "*.cpp" -o -name "*.hpp" | \
+          xargs clang-tidy --config-file=.clang-tidy \
+          --header-filter=".*" --warnings-as-errors="*"
+          
+      - name: Check Code Formatting
+        run: |
+          find src/ -name "*.cpp" -o -name "*.hpp" | \
+          xargs clang-format --dry-run --Werror
+          
+      - name: Run Cppcheck
+        run: |
+          cppcheck --enable=all --error-exitcode=1 \
+          --suppress=missingIncludeSystem src/

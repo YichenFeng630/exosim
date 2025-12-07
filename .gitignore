@@ -1,0 +1,9 @@
+/build/
+/install/
+/log/
+__pycache__/
+*.pyc
+
+*.blend*
+src/exoforge_description/blender/**/*.csv
+src/exoforge_description/blender/**/*.obj

@@ -1,0 +1,708 @@
+<mujoco model="JawModelRigid_v1.0.0">
+
+  <!-- 0. SIZE: Memory allocation and array dimensions -->
+  <size
+    memory="-1"
+    nuserdata="0"
+    nkey="0"
+    nuser_body="-1"
+    nuser_jnt="-1"
+    nuser_geom="-1"
+    nuser_site="-1"
+    nuser_cam="-1"
+    nuser_tendon="-1"
+    nuser_actuator="-1"
+    nuser_sensor="-1"
+  />
+
+  <option
+    timestep="0.002"
+    apirate="100"
+    impratio="1"
+    gravity="0 0 -9.81"
+    wind="0 0 0"
+    magnetic="0 -0.5 0"
+    density="0"
+    viscosity="0"
+    o_margin="0"
+    o_solref="0.02 1"
+    o_solimp="0.9 0.95 0.001 0.5 2"
+    o_friction="1 0.005 0.0001"
+    integrator="implicitfast"
+    cone="elliptic"
+    jacobian="auto"
+    solver="Newton"
+    iterations="100"
+    tolerance="1e-8"
+    ls_iterations="50"
+    ls_tolerance="0.01"
+    noslip_iterations="0"
+    noslip_tolerance="1e-6"
+    ccd_iterations="50"
+    ccd_tolerance="1e-6"
+    sdf_iterations="10"
+    sdf_initpoints="40"
+    actuatorgroupdisable=""
+  >
+    <!-- OPTION flags - Controls various simulation features -->
+    <flag
+      constraint="enable"
+      equality="enable"
+      frictionloss="enable"
+      limit="enable"
+      contact="enable"
+      spring="enable"
+      gravity="enable"
+      clampctrl="enable"
+      warmstart="enable"
+      filterparent="enable"
+      actuation="enable"
+      refsafe="enable"
+      sensor="enable"
+      midphase="enable"
+      nativeccd="enable"
+      eulerdamp="enable"
+      autoreset="enable"
+      override="disable"
+      energy="disable"
+      fwdinv="disable"
+      invdiscrete="disable"
+      multiccd="disable"
+      island="disable"
+    />
+  </option>
+
+  <!-- COMPILER settings - Controls model compilation and processing -->
+  <compiler
+    autolimits="true"
+    boundmass="0"
+    boundinertia="0"
+    settotalmass="-1"
+    balanceinertia="false"
+    strippath="false"
+    coordinate="local"
+    angle="degree"
+    fitaabb="false"
+    eulerseq="xyz"
+    meshdir="../../../meshes/"
+    texturedir="../../../textures/"
+    assetdir="assets/"
+    discardvisual="false"
+    usethread="true"
+    fusestatic="false"
+    inertiafromgeom="auto"
+    alignfree="true"
+    inertiagrouprange="0 5"
+    saveinertial="false"
+  >
+    <!-- LENGTHRANGE settings - Controls muscle length calculations -->
+    <lengthrange
+      mode="muscle"
+      useexisting="true"
+      uselimit="false"
+      accel="50"
+      maxforce="0"
+      timeconst="0.1"
+      timestep="0.005"
+      inttotal="20"
+      interval="2"
+      tolrange="0.05"
+    />
+  </compiler>
+
+  <visual>
+    <global
+      orthographic="false"
+      fovy="35"
+      azimuth="225"
+      elevation="0"
+      realtime="1"
+      offwidth="640"
+      offheight="480"
+      ellipsoidinertia="true"
+      bvactive="false"
+    />
+    <headlight diffuse="1 1 1" />
+    <scale
+      forcewidth="0.01"
+      contactwidth="0.001"
+      contactheight="0.1"
+      com="0.1"
+      camera="0.1"
+      light="0.1"
+      jointlength="1"
+      jointwidth="0.01"
+      actuatorwidth="0.075"
+      framelength="0.2"
+      framewidth="0.02"
+      constraint="0.1"
+    />
+  </visual>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <!-- Assets -->
+  <asset>
+
+    <!-- Materials -->
+    <material name="bone_material" rgba="0.5 0.5 0.5 1.0" />
+    <material name="muscle_material" rgba="0.6 0.17 0.17 1.0" />
+
+    <!-- Visualization meshes -->
+    <mesh name="skull_mesh_vis" file="anatomical/jaw/visualization/skull_vis.obj" />
+    <mesh name="maxilla_mesh_vis" file="anatomical/jaw/visualization/maxilla_vis.obj" />
+    <mesh name="mandible_mesh_vis" file="anatomical/jaw/visualization/mandible_vis.obj" />
+    <mesh name="hyoid_mesh_vis" file="anatomical/jaw/visualization/hyoid_vis.obj" />
+
+    <model name="jaw_model_maxilla_teeth_coll_geoms"
+      file="assets/jaw_model_maxilla_teeth_coll_geoms.xml" />
+    <model name="jaw_model_mandible_teeth_coll_geoms"
+      file="assets/jaw_model_mandible_teeth_coll_geoms.xml" />
+
+  </asset>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <default>
+
+    <default class="jaw">
+      <tendon
+        width="0.001"
+        rgba=".95 .3 .3 1"
+        limited="false"
+      />
+
+      <default class="collision">
+        <geom
+          type="mesh"
+          group="3"
+          contype="1"
+          conaffinity="1"
+          condim="3"
+          rgba="0.5 0.5 0.5 0.5"
+          density="0"
+          friction="1 0.005 0.0001"
+          solref="0.02 1"
+          solimp="0.9 0.95 0.001 0.5 2"
+          margin="0"
+          gap="0"
+          pos="0 0 0"
+          quat="1 0 0 0"
+        />
+      </default>
+
+      <default class="bone">
+        <geom
+          type="mesh"
+          group="2"
+          contype="0"
+          conaffinity="0"
+          material="bone_material"
+          density="3214.529"
+          pos="0 0 0"
+          quat="1 0 0 0"
+        />
+
+        <site
+          type="sphere"
+          rgba="0.5 0.5 0.5 1"
+          size="0.002"
+          pos="0 0 0"
+          quat="1 0 0 0"
+        />
+      </default>
+
+      <default class="muscle">
+        <muscle
+          ctrllimited="true"
+          ctrlrange="0 1"
+          timeconst="0.01 0.04"
+          range="0.75 1.1"
+          force="-1"
+          lmin="0.5"
+          lmax="1.6"
+          vmax="1.5"
+          fpmax="1.3"
+          fvmax="1.2"
+        />
+      </default>
+
+      <default class="ligament">
+        <tendon
+          width="0.0005"
+          rgba=".05 .6 .0 1"
+          limited="false"
+          stiffness="1e6"
+          damping="2000"
+        />
+      </default>
+
+      <default class="tmj">
+        <joint
+          type="free"
+          springdamper="0 0"
+          solreflimit="0.02 1"
+          solimplimit="0.9 0.95 0.001 0.5 2"
+          solreffriction="0.02 1"
+          solimpfriction="0.9 0.95 0.001 0.5 2"
+          stiffness="0"
+          limited="auto"
+          margin="0"
+          ref="0"
+          springref="0"
+          armature="1e-4"
+          damping="0.1"
+          frictionloss="0"
+        />
+
+        <default class="tmj_hinge">
+          <joint
+            type="hinge"
+            limited="true"
+          />
+        </default>
+
+        <default class="tmj_slide">
+          <joint
+            type="slide"
+            limited="true"
+          />
+        </default>
+      </default>
+    </default>
+
+  </default>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <worldbody>
+
+    <!-- Lights -->
+    <light
+      name="top_light"
+      pos="0 0 0.2"
+      dir="0 0 -1"
+      diffuse="0.7 0.7 0.7"
+      bulbradius="0.1"
+    />
+
+    <light
+      name="right_light"
+      pos="0.025 -0.25 -0.05"
+      dir="0 1 0"
+      diffuse="0.7 0.7 0.7"
+      bulbradius="0.1"
+    />
+
+    <light
+      name="top_right_light"
+      pos="0.2 -0.2 0.15"
+      dir="-1 1 -0.7"
+      diffuse="0.7 0.7 0.7"
+      bulbradius="0.1"
+    />
+
+    <!-- Skull - Root -->
+    <body name="skull" childclass="bone" pos="0 0 0" quat="1 0 0 0">
+      <!-- Used for visualization and mesh property calculations (intertia, mass, ...) -->
+      <geom
+        name="skull_vis"
+        mesh="skull_mesh_vis"
+      />
+
+      <!-- Skull muscle attachment sites -->
+      <site name="posterior_temporalis_left_origin" pos="0.002376 0.072731 -0.038848" />
+      <site name="posterior_temporalis_right_origin" pos="0.001848 -0.074369 -0.038443" />
+      <site name="medial_temporalis_left_origin" pos="0.021236 0.073781 -0.006373" />
+      <site name="medial_temporalis_right_origin" pos="0.020857 -0.073707 -0.006364" />
+      <site name="anterior_temporalis_left_origin" pos="0.061659 0.057529 -0.013507" />
+      <site name="anterior_temporalis_right_origin" pos="0.061392 -0.057329 -0.013929" />
+
+      <!-- Maxilla -->
+      <body name="maxilla" childclass="bone" pos="0 0 0" quat="1 0 0 0">
+        <!-- Used for visualization and mesh property calculations (intertia, mass, ...) -->
+        <geom
+          name="maxilla_vis"
+          mesh="maxilla_mesh_vis"
+        />
+
+        <!-- Collision geometry -->
+        <attach model="jaw_model_maxilla_teeth_coll_geoms" body="maxilla_teeth_coll_geoms"
+          prefix="jaw_" />
+
+        <!-- Maxilla muscle attachment sites -->
+        <site name="medial_pterygoid_left_origin" pos="0.040484 0.021974 -0.077632" />
+        <site name="medial_pterygoid_right_origin" pos="0.040239 -0.022103 -0.077597" />
+        <site name="superior_lateral_pterygoid_left_origin" pos="0.039071 0.044195 -0.064302" />
+        <site name="superior_lateral_pterygoid_right_origin" pos="0.039106 -0.044585 -0.064435" />
+        <site name="inferior_lateral_pterygoid_left_origin" pos="0.039066 0.023773 -0.073359" />
+        <site name="inferior_lateral_pterygoid_right_origin" pos="0.038599 -0.023643 -0.073492" />
+        <site name="superficial_masseter_left_origin" pos="0.05595 0.057321 -0.079778" />
+        <site name="superficial_masseter_right_origin" pos="0.055691 -0.056699 -0.07979" />
+        <site name="deep_masseter_left_origin" pos="0.041421 0.062619 -0.072225" />
+        <site name="deep_masseter_right_origin" pos="0.041206 -0.062581 -0.072245" />
+
+        <!-- Maxilla ligament attachment sites -->
+        <!-- <site name="tm_inner_horizontal_superior_left_origin" pos="0.041206 -0.062581
+        -0.072245" />
+        <site name="tm_inner_horizontal_superior_right_origin" pos="0.041206 -0.062581 -0.072245" /> -->
+        <site name="tm_inner_horizontal_inferior_left_origin" pos="0.042168 0.065709 -0.070237" />
+        <site name="tm_inner_horizontal_inferior_right_origin" pos="0.041961 -0.065624 -0.070352" />
+        <site name="tm_outer_oblique_left_origin" pos="0.042168 0.065709 -0.070237" />
+        <site name="tm_outer_oblique_right_origin" pos="0.041961 -0.065624 -0.070352" />
+      </body>
+
+      <!-- Hyoid bone -->
+      <body name="hyoid" childclass="bone" pos="0.0 0.0 0.0" quat="1 0 0 0">
+        <!-- Used for visualization and mesh property calculations (intertia, mass, ...) -->
+        <geom
+          name="hyoid_vis"
+          mesh="hyoid_mesh_vis"
+        />
+
+        <!-- Hyoid muscle attachment sites -->
+        <site name="geniohyoid_left_origin" pos="0.047506 0.001795 -0.146889" />
+        <site name="geniohyoid_right_origin" pos="0.047493 -0.001868 -0.147" />
+        <site name="anterior_digastric_left_origin" pos="0.043049 0.014645 -0.145468" />
+        <site name="anterior_digastric_right_origin" pos="0.043049 -0.014592 -0.145468" />
+        <site name="posterior_mylohyoid_left_origin" pos="0.042443 0.014947 -0.14533" />
+        <site name="posterior_mylohyoid_right_origin" pos="0.042447 -0.014822 -0.145319" />
+        <site name="anterior_mylohyoid_left_origin" pos="0.048461 0.002094 -0.148097" />
+        <site name="anterior_mylohyoid_right_origin" pos="0.048461 -0.002041 -0.148097" />
+      </body>
+
+      <!-- Movable mandible with TMJ constraints -->
+      <body name="mandible" childclass="bone" pos="0 0 0" quat="1 0 0 0">
+        <!-- Used for visualization and mesh property calculations (intertia, mass, ...) -->
+        <geom
+          name="mandible_vis"
+          mesh="mandible_mesh_vis"
+        />
+
+        <!-- Collision geometry -->
+        <attach model="jaw_model_mandible_teeth_coll_geoms" body="mandible_teeth_coll_geoms"
+          prefix="jaw_" />
+
+        <!-- TMJ joints -->
+        <joint name="tmj_slide_xz" class="tmj_slide"
+          range="0.0 0.01" axis="0.006894 0.0 -0.0034014"
+          stiffness="1.0e3" damping="63"
+          pos="0.0191167 0.0504874 -0.0708849" />
+
+        <joint name="tmj_slide_y" class="tmj_slide"
+          range="-0.0075 0.0075" axis="0 1 0"
+          stiffness="100.0" damping="18" />
+
+        <joint name="tmj_hinge_x" class="tmj_hinge"
+          range="-3 3" axis="1 0 0"
+          stiffness="100.0" damping="18"
+          pos="0.0191167 0.00001317 -0.0708849" />
+
+        <joint name="tmj_hinge_y" class="tmj_hinge"
+          range="-5 18" axis="0 1 0"
+          stiffness="5.0" damping="4"
+          pos="0.0191167 0.00001317 -0.0708849" />
+
+        <joint name="tmj_hinge_z" class="tmj_hinge"
+          range="-7 7" axis="0 0 1"
+          stiffness="100.0" damping="18"
+          pos="0.0191167 0.00001317 -0.0708849" />
+
+        <site name="tmj_pivot_point" size="0.001" rgba="0.5 0.5 0.5 1"
+          pos="0.0191167 0.00001317 -0.0708849" />
+
+        <!-- Mandible muscle attachment sites -->
+        <site name="posterior_temporalis_left_insertion" pos="0.051649 0.047508 -0.07463" />
+        <site name="posterior_temporalis_right_insertion" pos="0.051649 -0.047482 -0.07463" />
+        <site name="medial_temporalis_left_insertion" pos="0.052825 0.047428 -0.074333" />
+        <site name="medial_temporalis_right_insertion" pos="0.052825 -0.047401 -0.074333" />
+        <site name="anterior_temporalis_left_insertion" pos="0.046167 0.037138 -0.097696" />
+        <site name="anterior_temporalis_right_insertion" pos="0.046167 -0.037112 -0.097696" />
+        <site name="medial_pterygoid_left_insertion" pos="0.032283 0.041573 -0.124744" />
+        <site name="medial_pterygoid_right_insertion" pos="0.032283 -0.041547 -0.124744" />
+        <site name="superior_lateral_pterygoid_left_insertion" pos="0.021681 0.048132 -0.075091" />
+        <site name="superior_lateral_pterygoid_right_insertion" pos="0.021681 -0.048106 -0.075091" />
+        <site name="inferior_lateral_pterygoid_left_insertion" pos="0.022065 0.048964 -0.076605" />
+        <site name="inferior_lateral_pterygoid_right_insertion" pos="0.022065 -0.048938 -0.076605" />
+        <site name="superficial_masseter_left_insertion" pos="0.031859 0.047367 -0.124933" />
+        <site name="superficial_masseter_right_insertion" pos="0.031859 -0.047341 -0.124933" />
+        <site name="deep_masseter_left_insertion" pos="0.036351 0.046459 -0.099725" />
+        <site name="deep_masseter_right_insertion" pos="0.036351 -0.046433 -0.099725" />
+        <site name="geniohyoid_left_insertion" pos="0.084982 0.002494 -0.140281" />
+        <site name="geniohyoid_right_insertion" pos="0.084982 -0.002468 -0.140281" />
+        <site name="anterior_digastric_left_insertion" pos="0.086041 0.007394 -0.143029" />
+        <site name="anterior_digastric_right_insertion" pos="0.086098 -0.006736 -0.14293" />
+        <site name="posterior_mylohyoid_left_insertion" pos="0.050586 0.028467 -0.122611" />
+        <site name="posterior_mylohyoid_right_insertion" pos="0.050586 -0.02844 -0.122611" />
+        <site name="anterior_mylohyoid_left_insertion" pos="0.071549 0.020168 -0.136467" />
+        <site name="anterior_mylohyoid_right_insertion" pos="0.071549 -0.020141 -0.136467" />
+
+        <!-- Mandible ligament attachment sites -->
+        <!-- <site name="tm_inner_horizontal_superior_left_insertion" pos="0.041206 -0.062581
+        -0.072245" />
+        <site name="tm_inner_horizontal_superior_right_insertion" pos="0.041206 -0.062581 -0.072245" /> -->
+        <site name="tm_inner_horizontal_inferior_left_insertion" pos="0.020934 0.058669 -0.074024" />
+        <site name="tm_inner_horizontal_inferior_right_insertion" pos="0.020934 -0.058643 -0.074024" />
+        <site name="tm_outer_oblique_left_insertion" pos="0.018683 0.055791 -0.080563" />
+        <site name="tm_outer_oblique_right_insertion" pos="0.018683 -0.055765 -0.080563" />
+
+        <!-- Incisal point auxiliary body (for kinematics tracking) -->
+        <site
+          name="incisal_point"
+          pos="0.100209 1.3162e-05 -0.110933"
+          quat="-0.01779053 0.66579976 0.74582616 -0.01172697"
+          type="sphere"
+          size="0.001"
+          rgba="1 0 0 1"
+        />
+      </body>
+    </body>
+
+  </worldbody>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <contact>
+    <exclude
+      name="skull_maxilla_no_contact"
+      body1="skull"
+      body2="maxilla"
+    />
+
+    <exclude
+      name="skull_mandible_no_contact"
+      body1="skull"
+      body2="mandible"
+    />
+  </contact>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <tendon>
+    <!-- Muscle tendons -->
+    <spatial name="posterior_temporalis_left_tendon" class="jaw">
+      <site site="posterior_temporalis_left_origin" />
+      <site site="posterior_temporalis_left_insertion" />
+    </spatial>
+
+    <spatial name="posterior_temporalis_right_tendon" class="jaw">
+      <site site="posterior_temporalis_right_origin" />
+      <site site="posterior_temporalis_right_insertion" />
+    </spatial>
+
+    <spatial name="medial_temporalis_left_tendon" class="jaw">
+      <site site="medial_temporalis_left_origin" />
+      <site site="medial_temporalis_left_insertion" />
+    </spatial>
+
+    <spatial name="medial_temporalis_right_tendon" class="jaw">
+      <site site="medial_temporalis_right_origin" />
+      <site site="medial_temporalis_right_insertion" />
+    </spatial>
+
+    <spatial name="anterior_temporalis_left_tendon" class="jaw">
+      <site site="anterior_temporalis_left_origin" />
+      <site site="anterior_temporalis_left_insertion" />
+    </spatial>
+
+    <spatial name="anterior_temporalis_right_tendon" class="jaw">
+      <site site="anterior_temporalis_right_origin" />
+      <site site="anterior_temporalis_right_insertion" />
+    </spatial>
+
+    <spatial name="medial_pterygoid_left_tendon" class="jaw">
+      <site site="medial_pterygoid_left_origin" />
+      <site site="medial_pterygoid_left_insertion" />
+    </spatial>
+
+    <spatial name="medial_pterygoid_right_tendon" class="jaw">
+      <site site="medial_pterygoid_right_origin" />
+      <site site="medial_pterygoid_right_insertion" />
+    </spatial>
+
+    <spatial name="superior_lateral_pterygoid_left_tendon" class="jaw">
+      <site site="superior_lateral_pterygoid_left_origin" />
+      <site site="superior_lateral_pterygoid_left_insertion" />
+    </spatial>
+
+    <spatial name="superior_lateral_pterygoid_right_tendon" class="jaw">
+      <site site="superior_lateral_pterygoid_right_origin" />
+      <site site="superior_lateral_pterygoid_right_insertion" />
+    </spatial>
+
+    <spatial name="inferior_lateral_pterygoid_left_tendon" class="jaw">
+      <site site="inferior_lateral_pterygoid_left_origin" />
+      <site site="inferior_lateral_pterygoid_left_insertion" />
+    </spatial>
+
+    <spatial name="inferior_lateral_pterygoid_right_tendon" class="jaw">
+      <site site="inferior_lateral_pterygoid_right_origin" />
+      <site site="inferior_lateral_pterygoid_right_insertion" />
+    </spatial>
+
+    <spatial name="superficial_masseter_left_tendon" class="jaw">
+      <site site="superficial_masseter_left_origin" />
+      <site site="superficial_masseter_left_insertion" />
+    </spatial>
+
+    <spatial name="superficial_masseter_right_tendon" class="jaw">
+      <site site="superficial_masseter_right_origin" />
+      <site site="superficial_masseter_right_insertion" />
+    </spatial>
+
+    <spatial name="deep_masseter_left_tendon" class="jaw">
+      <site site="deep_masseter_left_origin" />
+      <site site="deep_masseter_left_insertion" />
+    </spatial>
+
+    <spatial name="deep_masseter_right_tendon" class="jaw">
+      <site site="deep_masseter_right_origin" />
+      <site site="deep_masseter_right_insertion" />
+    </spatial>
+
+    <spatial name="geniohyoid_left_tendon" class="jaw">
+      <site site="geniohyoid_left_origin" />
+      <site site="geniohyoid_left_insertion" />
+    </spatial>
+
+    <spatial name="geniohyoid_right_tendon" class="jaw">
+      <site site="geniohyoid_right_origin" />
+      <site site="geniohyoid_right_insertion" />
+    </spatial>
+
+    <spatial name="anterior_digastric_left_tendon" class="jaw">
+      <site site="anterior_digastric_left_origin" />
+      <site site="anterior_digastric_left_insertion" />
+    </spatial>
+
+    <spatial name="anterior_digastric_right_tendon" class="jaw">
+      <site site="anterior_digastric_right_origin" />
+      <site site="anterior_digastric_right_insertion" />
+    </spatial>
+
+    <spatial name="posterior_mylohyoid_left_tendon" class="jaw">
+      <site site="posterior_mylohyoid_left_origin" />
+      <site site="posterior_mylohyoid_left_insertion" />
+    </spatial>
+
+    <spatial name="posterior_mylohyoid_right_tendon" class="jaw">
+      <site site="posterior_mylohyoid_right_origin" />
+      <site site="posterior_mylohyoid_right_insertion" />
+    </spatial>
+
+    <spatial name="anterior_mylohyoid_left_tendon" class="jaw">
+      <site site="anterior_mylohyoid_left_origin" />
+      <site site="anterior_mylohyoid_left_insertion" />
+    </spatial>
+
+    <spatial name="anterior_mylohyoid_right_tendon" class="jaw">
+      <site site="anterior_mylohyoid_right_origin" />
+      <site site="anterior_mylohyoid_right_insertion" />
+    </spatial>
+
+    <!-- Ligaments -->
+    <spatial name="tm_inner_horizontal_inferior_left_tendon" class="ligament"
+      springlength="0 0.022689">
+      <site site="tm_inner_horizontal_inferior_left_origin" />
+      <site site="tm_inner_horizontal_inferior_left_insertion" />
+    </spatial>
+    <spatial name="tm_inner_horizontal_inferior_right_tendon" class="ligament"
+      springlength="0 0.022458">
+      <site site="tm_inner_horizontal_inferior_right_origin" />
+      <site site="tm_inner_horizontal_inferior_right_insertion" />
+    </spatial>
+    <spatial name="tm_outer_oblique_left_tendon" class="ligament"
+      springlength="0 0.027505">
+      <site site="tm_outer_oblique_left_origin" />
+      <site site="tm_outer_oblique_left_insertion" />
+    </spatial>
+    <spatial name="tm_outer_oblique_right_tendon" class="ligament"
+      springlength="0 0.027264">
+      <site site="tm_outer_oblique_right_origin" />
+      <site site="tm_outer_oblique_right_insertion" />
+    </spatial>
+  </tendon>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <actuator>
+
+    <!-- Temporalis muscles -->
+    <muscle name="posterior_temporalis_left" class="muscle" force="75.6" tausmooth="0.1"
+      tendon="posterior_temporalis_left_tendon" />
+
+    <muscle name="posterior_temporalis_right" class="muscle" force="75.6" tausmooth="0.1"
+      tendon="posterior_temporalis_right_tendon" />
+
+    <muscle name="medial_temporalis_left" class="muscle" force="95.6" tausmooth="0.1"
+      tendon="medial_temporalis_left_tendon" />
+
+    <muscle name="medial_temporalis_right" class="muscle" force="95.6" tausmooth="0.1"
+      tendon="medial_temporalis_right_tendon" />
+
+    <muscle name="anterior_temporalis_left" class="muscle" force="158.0" tausmooth="0.1"
+      tendon="anterior_temporalis_left_tendon" />
+
+    <muscle name="anterior_temporalis_right" class="muscle" force="158.0" tausmooth="0.1"
+      tendon="anterior_temporalis_right_tendon" />
+
+    <!-- Pterygoid muscles -->
+    <muscle name="medial_pterygoid_left" class="muscle" force="174.8" tausmooth="0.1"
+      tendon="medial_pterygoid_left_tendon" />
+
+    <muscle name="medial_pterygoid_right" class="muscle" force="174.8" tausmooth="0.1"
+      tendon="medial_pterygoid_right_tendon" />
+
+    <muscle name="superior_lateral_pterygoid_left" class="muscle" force="17.0" tausmooth="0.1"
+      tendon="superior_lateral_pterygoid_left_tendon" />
+
+    <muscle name="superior_lateral_pterygoid_right" class="muscle" force="17.0" tausmooth="0.1"
+      tendon="superior_lateral_pterygoid_right_tendon" />
+
+    <muscle name="inferior_lateral_pterygoid_left" class="muscle" force="66.9" tausmooth="0.1"
+      tendon="inferior_lateral_pterygoid_left_tendon" />
+
+    <muscle name="inferior_lateral_pterygoid_right" class="muscle" force="66.9" tausmooth="0.1"
+      tendon="inferior_lateral_pterygoid_right_tendon" />
+
+    <!-- Masseter muscles -->
+    <muscle name="superficial_masseter_left" class="muscle" force="190.4" tausmooth="0.1"
+      tendon="superficial_masseter_left_tendon" />
+
+    <muscle name="superficial_masseter_right" class="muscle" force="190.4" tausmooth="0.1"
+      tendon="superficial_masseter_right_tendon" />
+
+    <muscle name="deep_masseter_left" class="muscle" force="81.6" tausmooth="0.1"
+      tendon="deep_masseter_left_tendon" />
+
+    <muscle name="deep_masseter_right" class="muscle" force="81.6" tausmooth="0.1"
+      tendon="deep_masseter_right_tendon" />
+
+    <!-- Hyoid muscles (jaw opening) -->
+    <muscle name="geniohyoid_left" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="geniohyoid_left_tendon" />
+
+    <muscle name="geniohyoid_right" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="geniohyoid_right_tendon" />
+
+    <muscle name="anterior_digastric_left" class="muscle" force="40.0" tausmooth="0.1"
+      tendon="anterior_digastric_left_tendon" />
+
+    <muscle name="anterior_digastric_right" class="muscle" force="40.0" tausmooth="0.1"
+      tendon="anterior_digastric_right_tendon" />
+
+    <muscle name="posterior_mylohyoid_left" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="posterior_mylohyoid_left_tendon" />
+
+    <muscle name="posterior_mylohyoid_right" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="posterior_mylohyoid_right_tendon" />
+
+    <muscle name="anterior_mylohyoid_left" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="anterior_mylohyoid_left_tendon" />
+
+    <muscle name="anterior_mylohyoid_right" class="muscle" force="20.0" tausmooth="0.1"
+      tendon="anterior_mylohyoid_right_tendon" />
+
+  </actuator>
+
+</mujoco>

@@ -1,0 +1,26 @@
+exosim_core/                       # Core framework package
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── setup.py                       # Python package setup
+│   │   ├── include/exosim_core/
+│   │   │   ├── exoskeleton_base.hpp       # Abstract base classes
+│   │   │   ├── safety_monitor.hpp         # Safety system interfaces
+│   │   │   └── control_interface.hpp      # Control abstractions
+│   │   ├── src/
+│   │   │   ├── exoskeleton_base.cpp
+│   │   │   ├── safety_monitor.cpp
+│   │   │   └── plugin_loader.cpp
+│   │   ├── exosim_core/                   # Python module
+│   │   │   ├── __init__.py
+│   │   │   ├── base_classes.py
+│   │   │   ├── plugin_system.py
+│   │   │   └── utils.py
+│   │   ├── launch/
+│   │   │   ├── core_system.launch.py
+│   │   │   └── safety_monitor.launch.py
+│   │   ├── config/
+│   │   │   ├── default_safety.yaml
+│   │   │   └── core_parameters.yaml
+│   │   └── test/
+│   │       ├── test_base_classes.cpp
+│   │       └── test_safety_monitor.py

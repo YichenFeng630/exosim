@@ -1,0 +1,60 @@
+<mujoco>
+    <compiler
+        meshdir="../../../../meshes/"
+        texturedir="../../../../textures/"
+    >
+    </compiler>
+
+    <default>
+        <default class="collision">
+            <geom
+                type="mesh"
+                group="3"
+                contype="1"
+                conaffinity="1"
+                condim="3"
+                rgba="0.5 0.5 0.5 0.5"
+                density="0"
+                friction="1 0.005 0.0001"
+                solref="0.02 1"
+                solimp="0.9 0.95 0.001 0.5 2"
+                margin="0"
+                gap="0"
+                pos="0 0 0"
+                quat="1 0 0 0"
+            />
+        </default>
+    </default>
+
+    <asset>
+        <!-- Collision meshes -->
+        <!-- Mandible - Condyle left -->
+        <mesh name="mandible_condyle_left_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/mandible_condyle_left_coll/mandible_condyle_left_coll_0.obj" />
+        <mesh name="mandible_condyle_left_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/mandible_condyle_left_coll/mandible_condyle_left_coll_1.obj" />
+        <!-- Mandible - Condyle right -->
+        <mesh name="mandible_condyle_right_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/mandible_condyle_right_coll/mandible_condyle_right_coll_0.obj" />
+        <mesh name="mandible_condyle_right_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/mandible_condyle_right_coll/mandible_condyle_right_coll_1.obj" />
+    </asset>
+
+    <worldbody>
+        <body name="mandible_condyles_coll_geoms" childclass="collision">
+            <inertial pos="0 0 0" mass="0" />
+
+            <!-- Condyle left -->
+            <geom name="mandible_condyle_left_coll_0" class="collision"
+                mesh="mandible_condyle_left_mesh_coll_0" />
+            <geom name="mandible_condyle_left_coll_1" class="collision"
+                mesh="mandible_condyle_left_mesh_coll_1" />
+
+            <!-- Condyle right -->
+            <geom name="mandible_condyle_right_coll_0" class="collision"
+                mesh="mandible_condyle_right_mesh_coll_0" />
+            <geom name="mandible_condyle_right_coll_1" class="collision"
+                mesh="mandible_condyle_right_mesh_coll_1" />
+        </body>
+    </worldbody>
+</mujoco>

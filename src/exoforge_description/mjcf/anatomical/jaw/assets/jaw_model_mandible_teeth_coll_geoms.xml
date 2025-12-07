@@ -1,0 +1,111 @@
+<mujoco>
+    <compiler
+        meshdir="../../../../meshes/"
+        texturedir="../../../../textures/"
+    >
+    </compiler>
+
+    <default>
+        <default class="collision">
+            <geom
+                type="mesh"
+                group="3"
+                contype="1"
+                conaffinity="1"
+                condim="3"
+                rgba="0.5 0.5 0.5 0.5"
+                density="0"
+                friction="1 0.005 0.0001"
+                solref="0.02 1"
+                solimp="0.9 0.95 0.001 0.5 2"
+                margin="0"
+                gap="0"
+                pos="0 0 0"
+                quat="1 0 0 0"
+            />
+        </default>
+    </default>
+
+    <asset>
+        <!-- Collision meshes -->
+        <!-- Mandible simplified - Teeth -->
+        <mesh name="mandible_teeth_mesh_simplified_coll"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_plane_coll/mandible_teeth_plane_coll_0.obj" />
+        <!-- Mandible complex - Teeth -->
+        <mesh name="mandible_teeth_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_0.obj" />
+        <mesh name="mandible_teeth_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_1.obj" />
+        <mesh name="mandible_teeth_mesh_coll_2"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_2.obj" />
+        <mesh name="mandible_teeth_mesh_coll_3"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_3.obj" />
+        <mesh name="mandible_teeth_mesh_coll_4"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_4.obj" />
+        <mesh name="mandible_teeth_mesh_coll_5"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_5.obj" />
+        <mesh name="mandible_teeth_mesh_coll_6"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_6.obj" />
+        <mesh name="mandible_teeth_mesh_coll_7"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_7.obj" />
+        <mesh name="mandible_teeth_mesh_coll_8"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_8.obj" />
+        <mesh name="mandible_teeth_mesh_coll_9"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_9.obj" />
+        <mesh name="mandible_teeth_mesh_coll_10"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_10.obj" />
+        <mesh name="mandible_teeth_mesh_coll_11"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_11.obj" />
+        <mesh name="mandible_teeth_mesh_coll_12"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_12.obj" />
+        <mesh name="mandible_teeth_mesh_coll_13"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_13.obj" />
+        <mesh name="mandible_teeth_mesh_coll_14"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_14.obj" />
+        <mesh name="mandible_teeth_mesh_coll_15"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_15.obj" />
+        <mesh name="mandible_teeth_mesh_coll_16"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_16.obj" />
+        <mesh name="mandible_teeth_mesh_coll_17"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_17.obj" />
+        <mesh name="mandible_teeth_mesh_coll_18"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_18.obj" />
+        <mesh name="mandible_teeth_mesh_coll_19"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_19.obj" />
+        <mesh name="mandible_teeth_mesh_coll_20"
+            file="anatomical/jaw/collision/CoACD/mandible_teeth_coll/mandible_teeth_coll_20.obj" />
+    </asset>
+
+    <worldbody>
+        <body name="mandible_teeth_coll_geoms" childclass="collision">
+            <inertial pos="0 0 0" mass="0" />
+            
+            <!-- <geom
+                name="mandible_teeth_simplified_coll"
+                class="collision"
+                mesh="mandible_teeth_mesh_simplified_coll"
+            /> -->
+            <geom name="mandible_teeth_coll_0" class="collision" mesh="mandible_teeth_mesh_coll_0" />
+            <geom name="mandible_teeth_coll_1" class="collision" mesh="mandible_teeth_mesh_coll_1" />
+            <geom name="mandible_teeth_coll_2" class="collision" mesh="mandible_teeth_mesh_coll_2" />
+            <geom name="mandible_teeth_coll_3" class="collision" mesh="mandible_teeth_mesh_coll_3" />
+            <geom name="mandible_teeth_coll_4" class="collision" mesh="mandible_teeth_mesh_coll_4" />
+            <geom name="mandible_teeth_coll_5" class="collision" mesh="mandible_teeth_mesh_coll_5" />
+            <geom name="mandible_teeth_coll_6" class="collision" mesh="mandible_teeth_mesh_coll_6" />
+            <geom name="mandible_teeth_coll_7" class="collision" mesh="mandible_teeth_mesh_coll_7" />
+            <geom name="mandible_teeth_coll_8" class="collision" mesh="mandible_teeth_mesh_coll_8" />
+            <geom name="mandible_teeth_coll_9" class="collision" mesh="mandible_teeth_mesh_coll_9" />
+            <geom name="mandible_teeth_coll_10" class="collision" mesh="mandible_teeth_mesh_coll_10" />
+            <geom name="mandible_teeth_coll_11" class="collision" mesh="mandible_teeth_mesh_coll_11" />
+            <geom name="mandible_teeth_coll_12" class="collision" mesh="mandible_teeth_mesh_coll_12" />
+            <geom name="mandible_teeth_coll_13" class="collision" mesh="mandible_teeth_mesh_coll_13" />
+            <geom name="mandible_teeth_coll_14" class="collision" mesh="mandible_teeth_mesh_coll_14" />
+            <geom name="mandible_teeth_coll_15" class="collision" mesh="mandible_teeth_mesh_coll_15" />
+            <geom name="mandible_teeth_coll_16" class="collision" mesh="mandible_teeth_mesh_coll_16" />
+            <geom name="mandible_teeth_coll_17" class="collision" mesh="mandible_teeth_mesh_coll_17" />
+            <geom name="mandible_teeth_coll_18" class="collision" mesh="mandible_teeth_mesh_coll_18" />
+            <geom name="mandible_teeth_coll_19" class="collision" mesh="mandible_teeth_mesh_coll_19" />
+            <geom name="mandible_teeth_coll_20" class="collision" mesh="mandible_teeth_mesh_coll_20" />
+        </body>
+    </worldbody>
+</mujoco>

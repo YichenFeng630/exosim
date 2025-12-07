@@ -1,0 +1,27 @@
+├── exosim_simulation/                # MuJoCo integration
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── include/exosim_simulation/
+│   │   │   ├── mujoco_interface.hpp
+│   │   │   ├── simulation_manager.hpp
+│   │   │   └── physics_validator.hpp
+│   │   ├── src/
+│   │   │   ├── mujoco_wrapper.cpp
+│   │   │   ├── simulation_bridge.cpp
+│   │   │   └── model_loader.cpp
+│   │   ├── exosim_simulation/
+│   │   │   ├── __init__.py
+│   │   │   ├── mujoco_env.py
+│   │   │   ├── jaw_simulation.py
+│   │   │   └── physics_engine.py
+│   │   ├── scenarios/
+│   │   │   ├── basic_movement.py
+│   │   │   ├── jaw_therapy_sim.py
+│   │   │   └── validation_tests.py
+│   │   ├── config/
+│   │   │   ├── simulation_params.yaml
+│   │   │   ├── physics_settings.yaml
+│   │   │   └── jaw_sim_config.yaml
+│   │   └── launch/
+│   │       ├── mujoco_simulation.launch.py
+│   │       └── jaw_simulation.launch.py

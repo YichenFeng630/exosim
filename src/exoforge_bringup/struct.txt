@@ -1,0 +1,17 @@
+├── exosim_bringup/                   # System launch
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── launch/
+│   │   │   ├── full_system.launch.py
+│   │   │   ├── simulation_only.launch.py
+│   │   │   ├── hardware_mode.launch.py
+│   │   │   ├── jaw_therapy_system.launch.py
+│   │   │   └── calibration.launch.py
+│   │   ├── config/
+│   │   │   ├── system_config.yaml
+│   │   │   ├── hardware_config.yaml
+│   │   │   └── deployment_profiles.yaml
+│   │   └── scripts/
+│   │       ├── setup_environment.sh
+│   │       ├── calibrate_sensors.py
+│   │       └── health_check.py

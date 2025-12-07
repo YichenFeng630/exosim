@@ -1,0 +1,21 @@
+├── scripts/                              # Utility scripts
+│   ├── setup/
+│   │   ├── install_dependencies.sh
+│   │   ├── setup_workspace.sh
+│   │   └── configure_environment.py
+│   ├── build/
+│   │   ├── build_all.sh
+│   │   ├── clean_workspace.sh
+│   │   └── colcon_build.sh
+│   ├── testing/
+│   │   ├── run_all_tests.sh
+│   │   ├── integration_tests.py
+│   │   └── performance_benchmark.py
+│   ├── deployment/
+│   │   ├── deploy_clinical.sh
+│   │   ├── backup_data.py
+│   │   └── system_health.py
+│   └── development/
+│       ├── create_new_package.py
+│       ├── generate_docs.sh
+│       └── lint_code.sh

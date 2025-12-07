@@ -1,0 +1,10 @@
+<!-- Vertex extraction metadata:
+     timestamp: 2025-09-18 13:55:17
+     model_file: jaw_skin_model.xml
+     plane_normal: [-0.984, 0.0, 0.1773]
+     plane_offset: 0.03332953
+     total_vertices: 628
+     pinned_vertices: 28
+     plane_equation: -0.984*x + 0.000*y + 0.177*z + 0.033 > 0
+-->
+<pin id="2 3 6 30 31 75 76 77 78 79 80 81 82 83 328 329 331 348 349 393 394 395 396 397 398 399 400 401"/> <!-- 28 vertices pinned -->

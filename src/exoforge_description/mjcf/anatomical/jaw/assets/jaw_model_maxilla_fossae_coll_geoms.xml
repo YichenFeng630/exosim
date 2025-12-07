@@ -1,0 +1,1661 @@
+<mujoco>
+    <compiler
+        meshdir="../../../../meshes/"
+        texturedir="../../../../textures/"
+    >
+    </compiler>
+
+    <default>
+        <default class="collision">
+            <geom
+                type="mesh"
+                group="3"
+                contype="1"
+                conaffinity="1"
+                condim="3"
+                rgba="0.5 0.5 0.5 0.5"
+                density="0"
+                friction="1 0.005 0.0001"
+                solref="0.02 1"
+                solimp="0.9 0.95 0.001 0.5 2"
+                margin="0"
+                gap="0"
+                pos="0 0 0"
+                quat="1 0 0 0"
+            />
+        </default>
+    </default>
+
+    <asset>
+        <!-- Collision meshes -->
+        <!-- Maxilla - Fossa left -->
+        <mesh name="maxilla_fossa_left_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_0.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_1.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_2"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_2.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_3"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_3.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_4"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_4.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_5"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_5.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_6"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_6.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_7"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_7.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_8"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_8.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_9"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_9.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_10"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_10.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_11"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_11.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_12"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_12.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_13"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_13.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_14"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_14.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_15"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_15.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_16"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_16.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_17"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_17.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_18"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_18.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_19"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_19.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_20"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_20.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_21"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_21.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_22"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_22.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_23"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_23.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_24"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_24.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_25"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_25.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_26"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_26.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_27"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_27.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_28"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_28.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_29"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_29.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_30"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_30.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_31"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_31.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_32"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_32.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_33"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_33.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_34"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_34.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_35"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_35.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_36"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_36.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_37"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_37.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_38"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_38.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_39"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_39.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_40"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_40.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_41"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_41.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_42"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_42.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_43"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_43.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_44"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_44.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_45"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_45.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_46"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_46.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_47"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_47.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_48"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_48.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_49"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_49.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_50"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_50.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_51"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_51.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_52"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_52.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_53"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_53.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_54"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_54.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_55"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_55.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_56"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_56.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_57"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_57.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_58"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_58.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_59"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_59.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_60"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_60.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_61"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_61.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_62"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_62.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_63"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_63.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_64"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_64.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_65"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_65.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_66"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_66.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_67"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_67.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_68"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_68.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_69"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_69.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_70"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_70.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_71"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_71.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_72"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_72.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_73"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_73.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_74"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_74.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_75"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_75.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_76"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_76.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_77"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_77.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_78"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_78.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_79"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_79.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_80"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_80.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_81"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_81.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_82"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_82.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_83"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_83.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_84"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_84.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_85"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_85.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_86"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_86.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_87"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_87.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_88"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_88.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_89"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_89.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_90"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_90.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_91"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_91.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_92"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_92.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_93"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_93.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_94"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_94.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_95"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_95.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_96"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_96.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_97"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_97.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_98"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_98.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_99"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_99.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_100"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_100.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_101"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_101.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_102"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_102.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_103"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_103.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_104"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_104.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_105"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_105.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_106"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_106.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_107"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_107.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_108"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_108.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_109"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_109.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_110"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_110.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_111"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_111.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_112"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_112.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_113"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_113.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_114"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_114.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_115"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_115.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_116"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_116.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_117"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_117.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_118"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_118.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_119"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_119.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_120"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_120.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_121"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_121.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_122"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_122.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_123"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_123.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_124"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_124.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_125"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_125.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_126"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_126.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_127"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_127.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_128"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_128.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_129"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_129.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_130"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_130.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_131"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_131.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_132"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_132.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_133"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_133.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_134"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_134.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_135"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_135.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_136"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_136.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_137"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_137.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_138"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_138.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_139"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_139.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_140"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_140.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_141"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_141.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_142"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_142.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_143"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_143.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_144"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_144.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_145"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_145.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_146"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_146.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_147"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_147.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_148"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_148.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_149"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_149.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_150"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_150.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_151"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_151.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_152"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_152.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_153"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_153.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_154"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_154.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_155"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_155.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_156"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_156.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_157"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_157.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_158"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_158.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_159"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_159.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_160"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_160.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_161"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_161.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_162"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_162.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_163"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_163.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_164"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_164.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_165"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_165.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_166"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_166.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_167"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_167.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_168"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_168.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_169"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_169.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_170"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_170.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_171"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_171.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_172"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_172.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_173"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_173.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_174"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_174.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_175"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_175.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_176"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_176.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_177"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_177.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_178"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_178.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_179"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_179.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_180"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_180.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_181"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_181.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_182"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_182.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_183"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_183.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_184"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_184.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_185"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_185.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_186"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_186.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_187"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_187.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_188"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_188.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_189"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_189.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_190"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_190.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_191"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_191.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_192"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_192.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_193"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_193.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_194"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_194.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_195"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_195.obj" />
+        <mesh name="maxilla_fossa_left_mesh_coll_196"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_left_coll/maxilla_fossa_left_coll_196.obj" />
+
+        <!-- Maxilla - Fossa right -->
+        <mesh name="maxilla_fossa_right_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_0.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_1.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_2"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_2.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_3"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_3.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_4"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_4.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_5"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_5.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_6"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_6.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_7"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_7.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_8"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_8.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_9"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_9.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_10"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_10.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_11"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_11.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_12"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_12.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_13"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_13.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_14"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_14.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_15"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_15.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_16"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_16.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_17"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_17.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_18"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_18.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_19"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_19.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_20"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_20.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_21"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_21.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_22"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_22.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_23"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_23.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_24"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_24.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_25"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_25.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_26"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_26.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_27"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_27.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_28"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_28.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_29"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_29.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_30"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_30.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_31"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_31.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_32"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_32.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_33"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_33.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_34"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_34.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_35"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_35.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_36"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_36.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_37"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_37.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_38"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_38.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_39"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_39.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_40"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_40.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_41"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_41.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_42"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_42.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_43"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_43.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_44"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_44.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_45"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_45.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_46"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_46.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_47"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_47.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_48"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_48.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_49"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_49.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_50"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_50.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_51"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_51.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_52"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_52.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_53"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_53.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_54"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_54.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_55"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_55.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_56"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_56.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_57"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_57.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_58"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_58.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_59"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_59.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_60"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_60.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_61"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_61.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_62"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_62.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_63"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_63.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_64"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_64.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_65"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_65.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_66"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_66.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_67"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_67.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_68"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_68.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_69"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_69.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_70"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_70.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_71"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_71.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_72"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_72.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_73"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_73.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_74"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_74.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_75"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_75.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_76"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_76.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_77"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_77.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_78"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_78.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_79"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_79.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_80"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_80.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_81"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_81.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_82"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_82.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_83"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_83.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_84"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_84.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_85"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_85.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_86"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_86.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_87"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_87.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_88"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_88.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_89"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_89.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_90"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_90.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_91"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_91.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_92"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_92.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_93"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_93.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_94"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_94.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_95"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_95.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_96"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_96.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_97"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_97.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_98"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_98.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_99"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_99.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_100"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_100.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_101"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_101.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_102"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_102.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_103"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_103.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_104"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_104.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_105"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_105.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_106"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_106.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_107"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_107.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_108"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_108.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_109"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_109.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_110"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_110.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_111"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_111.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_112"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_112.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_113"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_113.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_114"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_114.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_115"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_115.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_116"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_116.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_117"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_117.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_118"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_118.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_119"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_119.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_120"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_120.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_121"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_121.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_122"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_122.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_123"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_123.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_124"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_124.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_125"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_125.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_126"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_126.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_127"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_127.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_128"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_128.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_129"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_129.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_130"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_130.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_131"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_131.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_132"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_132.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_133"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_133.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_134"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_134.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_135"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_135.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_136"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_136.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_137"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_137.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_138"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_138.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_139"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_139.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_140"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_140.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_141"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_141.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_142"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_142.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_143"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_143.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_144"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_144.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_145"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_145.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_146"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_146.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_147"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_147.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_148"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_148.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_149"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_149.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_150"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_150.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_151"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_151.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_152"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_152.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_153"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_153.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_154"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_154.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_155"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_155.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_156"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_156.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_157"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_157.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_158"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_158.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_159"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_159.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_160"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_160.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_161"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_161.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_162"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_162.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_163"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_163.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_164"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_164.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_165"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_165.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_166"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_166.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_167"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_167.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_168"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_168.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_169"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_169.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_170"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_170.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_171"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_171.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_172"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_172.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_173"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_173.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_174"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_174.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_175"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_175.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_176"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_176.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_177"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_177.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_178"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_178.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_179"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_179.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_180"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_180.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_181"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_181.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_182"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_182.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_183"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_183.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_184"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_184.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_185"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_185.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_186"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_186.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_187"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_187.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_188"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_188.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_189"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_189.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_190"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_190.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_191"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_191.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_192"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_192.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_193"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_193.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_194"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_194.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_195"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_195.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_196"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_196.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_197"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_197.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_198"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_198.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_199"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_199.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_200"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_200.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_201"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_201.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_202"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_202.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_203"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_203.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_204"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_204.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_205"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_205.obj" />
+        <mesh name="maxilla_fossa_right_mesh_coll_206"
+            file="anatomical/jaw/collision/CoACD/maxilla_fossa_right_coll/maxilla_fossa_right_coll_206.obj" />
+    </asset>
+
+    <worldbody>
+        <body name="maxilla_fossae_coll_geoms" childclass="collision">
+            <inertial pos="0 0 0" mass="0" />
+
+            <!-- Condyle left -->
+            <geom name="maxilla_fossa_left_coll_0" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_0" />
+            <geom name="maxilla_fossa_left_coll_1" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_1" />
+            <geom name="maxilla_fossa_left_coll_2" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_2" />
+            <geom name="maxilla_fossa_left_coll_3" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_3" />
+            <geom name="maxilla_fossa_left_coll_4" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_4" />
+            <geom name="maxilla_fossa_left_coll_5" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_5" />
+            <geom name="maxilla_fossa_left_coll_6" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_6" />
+            <geom name="maxilla_fossa_left_coll_7" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_7" />
+            <geom name="maxilla_fossa_left_coll_8" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_8" />
+            <geom name="maxilla_fossa_left_coll_9" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_9" />
+            <geom name="maxilla_fossa_left_coll_10" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_10" />
+            <geom name="maxilla_fossa_left_coll_11" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_11" />
+            <geom name="maxilla_fossa_left_coll_12" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_12" />
+            <geom name="maxilla_fossa_left_coll_13" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_13" />
+            <geom name="maxilla_fossa_left_coll_14" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_14" />
+            <geom name="maxilla_fossa_left_coll_15" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_15" />
+            <geom name="maxilla_fossa_left_coll_16" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_16" />
+            <geom name="maxilla_fossa_left_coll_17" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_17" />
+            <geom name="maxilla_fossa_left_coll_18" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_18" />
+            <geom name="maxilla_fossa_left_coll_19" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_19" />
+            <geom name="maxilla_fossa_left_coll_20" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_20" />
+            <geom name="maxilla_fossa_left_coll_21" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_21" />
+            <geom name="maxilla_fossa_left_coll_22" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_22" />
+            <geom name="maxilla_fossa_left_coll_23" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_23" />
+            <geom name="maxilla_fossa_left_coll_24" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_24" />
+            <geom name="maxilla_fossa_left_coll_25" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_25" />
+            <geom name="maxilla_fossa_left_coll_26" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_26" />
+            <geom name="maxilla_fossa_left_coll_27" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_27" />
+            <geom name="maxilla_fossa_left_coll_28" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_28" />
+            <geom name="maxilla_fossa_left_coll_29" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_29" />
+            <geom name="maxilla_fossa_left_coll_30" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_30" />
+            <geom name="maxilla_fossa_left_coll_31" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_31" />
+            <geom name="maxilla_fossa_left_coll_32" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_32" />
+            <geom name="maxilla_fossa_left_coll_33" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_33" />
+            <geom name="maxilla_fossa_left_coll_34" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_34" />
+            <geom name="maxilla_fossa_left_coll_35" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_35" />
+            <geom name="maxilla_fossa_left_coll_36" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_36" />
+            <geom name="maxilla_fossa_left_coll_37" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_37" />
+            <geom name="maxilla_fossa_left_coll_38" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_38" />
+            <geom name="maxilla_fossa_left_coll_39" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_39" />
+            <geom name="maxilla_fossa_left_coll_40" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_40" />
+            <geom name="maxilla_fossa_left_coll_41" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_41" />
+            <geom name="maxilla_fossa_left_coll_42" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_42" />
+            <geom name="maxilla_fossa_left_coll_43" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_43" />
+            <geom name="maxilla_fossa_left_coll_44" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_44" />
+            <geom name="maxilla_fossa_left_coll_45" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_45" />
+            <geom name="maxilla_fossa_left_coll_46" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_46" />
+            <geom name="maxilla_fossa_left_coll_47" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_47" />
+            <geom name="maxilla_fossa_left_coll_48" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_48" />
+            <geom name="maxilla_fossa_left_coll_49" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_49" />
+            <geom name="maxilla_fossa_left_coll_50" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_50" />
+            <geom name="maxilla_fossa_left_coll_51" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_51" />
+            <geom name="maxilla_fossa_left_coll_52" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_52" />
+            <geom name="maxilla_fossa_left_coll_53" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_53" />
+            <geom name="maxilla_fossa_left_coll_54" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_54" />
+            <geom name="maxilla_fossa_left_coll_55" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_55" />
+            <geom name="maxilla_fossa_left_coll_56" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_56" />
+            <geom name="maxilla_fossa_left_coll_57" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_57" />
+            <geom name="maxilla_fossa_left_coll_58" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_58" />
+            <geom name="maxilla_fossa_left_coll_59" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_59" />
+            <geom name="maxilla_fossa_left_coll_60" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_60" />
+            <geom name="maxilla_fossa_left_coll_61" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_61" />
+            <geom name="maxilla_fossa_left_coll_62" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_62" />
+            <geom name="maxilla_fossa_left_coll_63" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_63" />
+            <geom name="maxilla_fossa_left_coll_64" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_64" />
+            <geom name="maxilla_fossa_left_coll_65" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_65" />
+            <geom name="maxilla_fossa_left_coll_66" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_66" />
+            <geom name="maxilla_fossa_left_coll_67" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_67" />
+            <geom name="maxilla_fossa_left_coll_68" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_68" />
+            <geom name="maxilla_fossa_left_coll_69" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_69" />
+            <geom name="maxilla_fossa_left_coll_70" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_70" />
+            <geom name="maxilla_fossa_left_coll_71" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_71" />
+            <geom name="maxilla_fossa_left_coll_72" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_72" />
+            <geom name="maxilla_fossa_left_coll_73" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_73" />
+            <geom name="maxilla_fossa_left_coll_74" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_74" />
+            <geom name="maxilla_fossa_left_coll_75" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_75" />
+            <geom name="maxilla_fossa_left_coll_76" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_76" />
+            <geom name="maxilla_fossa_left_coll_77" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_77" />
+            <geom name="maxilla_fossa_left_coll_78" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_78" />
+            <geom name="maxilla_fossa_left_coll_79" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_79" />
+            <geom name="maxilla_fossa_left_coll_80" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_80" />
+            <geom name="maxilla_fossa_left_coll_81" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_81" />
+            <geom name="maxilla_fossa_left_coll_82" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_82" />
+            <geom name="maxilla_fossa_left_coll_83" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_83" />
+            <geom name="maxilla_fossa_left_coll_84" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_84" />
+            <geom name="maxilla_fossa_left_coll_85" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_85" />
+            <geom name="maxilla_fossa_left_coll_86" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_86" />
+            <geom name="maxilla_fossa_left_coll_87" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_87" />
+            <geom name="maxilla_fossa_left_coll_88" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_88" />
+            <geom name="maxilla_fossa_left_coll_89" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_89" />
+            <geom name="maxilla_fossa_left_coll_90" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_90" />
+            <geom name="maxilla_fossa_left_coll_91" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_91" />
+            <geom name="maxilla_fossa_left_coll_92" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_92" />
+            <geom name="maxilla_fossa_left_coll_93" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_93" />
+            <geom name="maxilla_fossa_left_coll_94" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_94" />
+            <geom name="maxilla_fossa_left_coll_95" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_95" />
+            <geom name="maxilla_fossa_left_coll_96" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_96" />
+            <geom name="maxilla_fossa_left_coll_97" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_97" />
+            <geom name="maxilla_fossa_left_coll_98" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_98" />
+            <geom name="maxilla_fossa_left_coll_99" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_99" />
+            <geom name="maxilla_fossa_left_coll_100" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_100" />
+            <geom name="maxilla_fossa_left_coll_101" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_101" />
+            <geom name="maxilla_fossa_left_coll_102" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_102" />
+            <geom name="maxilla_fossa_left_coll_103" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_103" />
+            <geom name="maxilla_fossa_left_coll_104" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_104" />
+            <geom name="maxilla_fossa_left_coll_105" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_105" />
+            <geom name="maxilla_fossa_left_coll_106" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_106" />
+            <geom name="maxilla_fossa_left_coll_107" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_107" />
+            <geom name="maxilla_fossa_left_coll_108" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_108" />
+            <geom name="maxilla_fossa_left_coll_109" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_109" />
+            <geom name="maxilla_fossa_left_coll_110" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_110" />
+            <geom name="maxilla_fossa_left_coll_111" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_111" />
+            <geom name="maxilla_fossa_left_coll_112" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_112" />
+            <geom name="maxilla_fossa_left_coll_113" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_113" />
+            <geom name="maxilla_fossa_left_coll_114" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_114" />
+            <geom name="maxilla_fossa_left_coll_115" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_115" />
+            <geom name="maxilla_fossa_left_coll_116" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_116" />
+            <geom name="maxilla_fossa_left_coll_117" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_117" />
+            <geom name="maxilla_fossa_left_coll_118" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_118" />
+            <geom name="maxilla_fossa_left_coll_119" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_119" />
+            <geom name="maxilla_fossa_left_coll_120" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_120" />
+            <geom name="maxilla_fossa_left_coll_121" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_121" />
+            <geom name="maxilla_fossa_left_coll_122" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_122" />
+            <geom name="maxilla_fossa_left_coll_123" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_123" />
+            <geom name="maxilla_fossa_left_coll_124" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_124" />
+            <geom name="maxilla_fossa_left_coll_125" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_125" />
+            <geom name="maxilla_fossa_left_coll_126" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_126" />
+            <geom name="maxilla_fossa_left_coll_127" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_127" />
+            <geom name="maxilla_fossa_left_coll_128" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_128" />
+            <geom name="maxilla_fossa_left_coll_129" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_129" />
+            <geom name="maxilla_fossa_left_coll_130" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_130" />
+            <geom name="maxilla_fossa_left_coll_131" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_131" />
+            <geom name="maxilla_fossa_left_coll_132" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_132" />
+            <geom name="maxilla_fossa_left_coll_133" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_133" />
+            <geom name="maxilla_fossa_left_coll_134" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_134" />
+            <geom name="maxilla_fossa_left_coll_135" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_135" />
+            <geom name="maxilla_fossa_left_coll_136" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_136" />
+            <geom name="maxilla_fossa_left_coll_137" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_137" />
+            <geom name="maxilla_fossa_left_coll_138" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_138" />
+            <geom name="maxilla_fossa_left_coll_139" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_139" />
+            <geom name="maxilla_fossa_left_coll_140" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_140" />
+            <geom name="maxilla_fossa_left_coll_141" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_141" />
+            <geom name="maxilla_fossa_left_coll_142" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_142" />
+            <geom name="maxilla_fossa_left_coll_143" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_143" />
+            <geom name="maxilla_fossa_left_coll_144" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_144" />
+            <geom name="maxilla_fossa_left_coll_145" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_145" />
+            <geom name="maxilla_fossa_left_coll_146" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_146" />
+            <geom name="maxilla_fossa_left_coll_147" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_147" />
+            <geom name="maxilla_fossa_left_coll_148" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_148" />
+            <geom name="maxilla_fossa_left_coll_149" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_149" />
+            <geom name="maxilla_fossa_left_coll_150" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_150" />
+            <geom name="maxilla_fossa_left_coll_151" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_151" />
+            <geom name="maxilla_fossa_left_coll_152" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_152" />
+            <geom name="maxilla_fossa_left_coll_153" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_153" />
+            <geom name="maxilla_fossa_left_coll_154" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_154" />
+            <geom name="maxilla_fossa_left_coll_155" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_155" />
+            <geom name="maxilla_fossa_left_coll_156" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_156" />
+            <geom name="maxilla_fossa_left_coll_157" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_157" />
+            <geom name="maxilla_fossa_left_coll_158" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_158" />
+            <geom name="maxilla_fossa_left_coll_159" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_159" />
+            <geom name="maxilla_fossa_left_coll_160" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_160" />
+            <geom name="maxilla_fossa_left_coll_161" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_161" />
+            <geom name="maxilla_fossa_left_coll_162" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_162" />
+            <geom name="maxilla_fossa_left_coll_163" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_163" />
+            <geom name="maxilla_fossa_left_coll_164" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_164" />
+            <geom name="maxilla_fossa_left_coll_165" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_165" />
+            <geom name="maxilla_fossa_left_coll_166" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_166" />
+            <geom name="maxilla_fossa_left_coll_167" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_167" />
+            <geom name="maxilla_fossa_left_coll_168" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_168" />
+            <geom name="maxilla_fossa_left_coll_169" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_169" />
+            <geom name="maxilla_fossa_left_coll_170" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_170" />
+            <geom name="maxilla_fossa_left_coll_171" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_171" />
+            <geom name="maxilla_fossa_left_coll_172" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_172" />
+            <geom name="maxilla_fossa_left_coll_173" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_173" />
+            <geom name="maxilla_fossa_left_coll_174" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_174" />
+            <geom name="maxilla_fossa_left_coll_175" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_175" />
+            <geom name="maxilla_fossa_left_coll_176" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_176" />
+            <geom name="maxilla_fossa_left_coll_177" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_177" />
+            <geom name="maxilla_fossa_left_coll_178" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_178" />
+            <geom name="maxilla_fossa_left_coll_179" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_179" />
+            <geom name="maxilla_fossa_left_coll_180" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_180" />
+            <geom name="maxilla_fossa_left_coll_181" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_181" />
+            <geom name="maxilla_fossa_left_coll_182" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_182" />
+            <geom name="maxilla_fossa_left_coll_183" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_183" />
+            <geom name="maxilla_fossa_left_coll_184" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_184" />
+            <geom name="maxilla_fossa_left_coll_185" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_185" />
+            <geom name="maxilla_fossa_left_coll_186" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_186" />
+            <geom name="maxilla_fossa_left_coll_187" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_187" />
+            <geom name="maxilla_fossa_left_coll_188" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_188" />
+            <geom name="maxilla_fossa_left_coll_189" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_189" />
+            <geom name="maxilla_fossa_left_coll_190" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_190" />
+            <geom name="maxilla_fossa_left_coll_191" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_191" />
+            <geom name="maxilla_fossa_left_coll_192" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_192" />
+            <geom name="maxilla_fossa_left_coll_193" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_193" />
+            <geom name="maxilla_fossa_left_coll_194" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_194" />
+            <geom name="maxilla_fossa_left_coll_195" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_195" />
+            <geom name="maxilla_fossa_left_coll_196" class="collision"
+                mesh="maxilla_fossa_left_mesh_coll_196" />
+
+            <!-- Condyle right -->
+            <geom name="maxilla_fossa_right_coll_0" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_0" />
+            <geom name="maxilla_fossa_right_coll_1" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_1" />
+            <geom name="maxilla_fossa_right_coll_2" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_2" />
+            <geom name="maxilla_fossa_right_coll_3" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_3" />
+            <geom name="maxilla_fossa_right_coll_4" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_4" />
+            <geom name="maxilla_fossa_right_coll_5" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_5" />
+            <geom name="maxilla_fossa_right_coll_6" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_6" />
+            <geom name="maxilla_fossa_right_coll_7" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_7" />
+            <geom name="maxilla_fossa_right_coll_8" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_8" />
+            <geom name="maxilla_fossa_right_coll_9" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_9" />
+            <geom name="maxilla_fossa_right_coll_10" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_10" />
+            <geom name="maxilla_fossa_right_coll_11" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_11" />
+            <geom name="maxilla_fossa_right_coll_12" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_12" />
+            <geom name="maxilla_fossa_right_coll_13" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_13" />
+            <geom name="maxilla_fossa_right_coll_14" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_14" />
+            <geom name="maxilla_fossa_right_coll_15" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_15" />
+            <geom name="maxilla_fossa_right_coll_16" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_16" />
+            <geom name="maxilla_fossa_right_coll_17" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_17" />
+            <geom name="maxilla_fossa_right_coll_18" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_18" />
+            <geom name="maxilla_fossa_right_coll_19" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_19" />
+            <geom name="maxilla_fossa_right_coll_20" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_20" />
+            <geom name="maxilla_fossa_right_coll_21" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_21" />
+            <geom name="maxilla_fossa_right_coll_22" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_22" />
+            <geom name="maxilla_fossa_right_coll_23" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_23" />
+            <geom name="maxilla_fossa_right_coll_24" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_24" />
+            <geom name="maxilla_fossa_right_coll_25" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_25" />
+            <geom name="maxilla_fossa_right_coll_26" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_26" />
+            <geom name="maxilla_fossa_right_coll_27" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_27" />
+            <geom name="maxilla_fossa_right_coll_28" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_28" />
+            <geom name="maxilla_fossa_right_coll_29" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_29" />
+            <geom name="maxilla_fossa_right_coll_30" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_30" />
+            <geom name="maxilla_fossa_right_coll_31" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_31" />
+            <geom name="maxilla_fossa_right_coll_32" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_32" />
+            <geom name="maxilla_fossa_right_coll_33" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_33" />
+            <geom name="maxilla_fossa_right_coll_34" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_34" />
+            <geom name="maxilla_fossa_right_coll_35" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_35" />
+            <geom name="maxilla_fossa_right_coll_36" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_36" />
+            <geom name="maxilla_fossa_right_coll_37" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_37" />
+            <geom name="maxilla_fossa_right_coll_38" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_38" />
+            <geom name="maxilla_fossa_right_coll_39" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_39" />
+            <geom name="maxilla_fossa_right_coll_40" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_40" />
+            <geom name="maxilla_fossa_right_coll_41" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_41" />
+            <geom name="maxilla_fossa_right_coll_42" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_42" />
+            <geom name="maxilla_fossa_right_coll_43" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_43" />
+            <geom name="maxilla_fossa_right_coll_44" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_44" />
+            <geom name="maxilla_fossa_right_coll_45" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_45" />
+            <geom name="maxilla_fossa_right_coll_46" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_46" />
+            <geom name="maxilla_fossa_right_coll_47" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_47" />
+            <geom name="maxilla_fossa_right_coll_48" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_48" />
+            <geom name="maxilla_fossa_right_coll_49" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_49" />
+            <geom name="maxilla_fossa_right_coll_50" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_50" />
+            <geom name="maxilla_fossa_right_coll_51" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_51" />
+            <geom name="maxilla_fossa_right_coll_52" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_52" />
+            <geom name="maxilla_fossa_right_coll_53" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_53" />
+            <geom name="maxilla_fossa_right_coll_54" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_54" />
+            <geom name="maxilla_fossa_right_coll_55" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_55" />
+            <geom name="maxilla_fossa_right_coll_56" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_56" />
+            <geom name="maxilla_fossa_right_coll_57" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_57" />
+            <geom name="maxilla_fossa_right_coll_58" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_58" />
+            <geom name="maxilla_fossa_right_coll_59" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_59" />
+            <geom name="maxilla_fossa_right_coll_60" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_60" />
+            <geom name="maxilla_fossa_right_coll_61" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_61" />
+            <geom name="maxilla_fossa_right_coll_62" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_62" />
+            <geom name="maxilla_fossa_right_coll_63" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_63" />
+            <geom name="maxilla_fossa_right_coll_64" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_64" />
+            <geom name="maxilla_fossa_right_coll_65" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_65" />
+            <geom name="maxilla_fossa_right_coll_66" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_66" />
+            <geom name="maxilla_fossa_right_coll_67" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_67" />
+            <geom name="maxilla_fossa_right_coll_68" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_68" />
+            <geom name="maxilla_fossa_right_coll_69" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_69" />
+            <geom name="maxilla_fossa_right_coll_70" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_70" />
+            <geom name="maxilla_fossa_right_coll_71" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_71" />
+            <geom name="maxilla_fossa_right_coll_72" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_72" />
+            <geom name="maxilla_fossa_right_coll_73" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_73" />
+            <geom name="maxilla_fossa_right_coll_74" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_74" />
+            <geom name="maxilla_fossa_right_coll_75" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_75" />
+            <geom name="maxilla_fossa_right_coll_76" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_76" />
+            <geom name="maxilla_fossa_right_coll_77" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_77" />
+            <geom name="maxilla_fossa_right_coll_78" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_78" />
+            <geom name="maxilla_fossa_right_coll_79" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_79" />
+            <geom name="maxilla_fossa_right_coll_80" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_80" />
+            <geom name="maxilla_fossa_right_coll_81" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_81" />
+            <geom name="maxilla_fossa_right_coll_82" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_82" />
+            <geom name="maxilla_fossa_right_coll_83" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_83" />
+            <geom name="maxilla_fossa_right_coll_84" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_84" />
+            <geom name="maxilla_fossa_right_coll_85" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_85" />
+            <geom name="maxilla_fossa_right_coll_86" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_86" />
+            <geom name="maxilla_fossa_right_coll_87" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_87" />
+            <geom name="maxilla_fossa_right_coll_88" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_88" />
+            <geom name="maxilla_fossa_right_coll_89" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_89" />
+            <geom name="maxilla_fossa_right_coll_90" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_90" />
+            <geom name="maxilla_fossa_right_coll_91" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_91" />
+            <geom name="maxilla_fossa_right_coll_92" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_92" />
+            <geom name="maxilla_fossa_right_coll_93" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_93" />
+            <geom name="maxilla_fossa_right_coll_94" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_94" />
+            <geom name="maxilla_fossa_right_coll_95" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_95" />
+            <geom name="maxilla_fossa_right_coll_96" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_96" />
+            <geom name="maxilla_fossa_right_coll_97" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_97" />
+            <geom name="maxilla_fossa_right_coll_98" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_98" />
+            <geom name="maxilla_fossa_right_coll_99" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_99" />
+            <geom name="maxilla_fossa_right_coll_100" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_100" />
+            <geom name="maxilla_fossa_right_coll_101" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_101" />
+            <geom name="maxilla_fossa_right_coll_102" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_102" />
+            <geom name="maxilla_fossa_right_coll_103" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_103" />
+            <geom name="maxilla_fossa_right_coll_104" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_104" />
+            <geom name="maxilla_fossa_right_coll_105" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_105" />
+            <geom name="maxilla_fossa_right_coll_106" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_106" />
+            <geom name="maxilla_fossa_right_coll_107" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_107" />
+            <geom name="maxilla_fossa_right_coll_108" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_108" />
+            <geom name="maxilla_fossa_right_coll_109" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_109" />
+            <geom name="maxilla_fossa_right_coll_110" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_110" />
+            <geom name="maxilla_fossa_right_coll_111" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_111" />
+            <geom name="maxilla_fossa_right_coll_112" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_112" />
+            <geom name="maxilla_fossa_right_coll_113" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_113" />
+            <geom name="maxilla_fossa_right_coll_114" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_114" />
+            <geom name="maxilla_fossa_right_coll_115" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_115" />
+            <geom name="maxilla_fossa_right_coll_116" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_116" />
+            <geom name="maxilla_fossa_right_coll_117" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_117" />
+            <geom name="maxilla_fossa_right_coll_118" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_118" />
+            <geom name="maxilla_fossa_right_coll_119" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_119" />
+            <geom name="maxilla_fossa_right_coll_120" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_120" />
+            <geom name="maxilla_fossa_right_coll_121" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_121" />
+            <geom name="maxilla_fossa_right_coll_122" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_122" />
+            <geom name="maxilla_fossa_right_coll_123" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_123" />
+            <geom name="maxilla_fossa_right_coll_124" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_124" />
+            <geom name="maxilla_fossa_right_coll_125" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_125" />
+            <geom name="maxilla_fossa_right_coll_126" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_126" />
+            <geom name="maxilla_fossa_right_coll_127" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_127" />
+            <geom name="maxilla_fossa_right_coll_128" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_128" />
+            <geom name="maxilla_fossa_right_coll_129" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_129" />
+            <geom name="maxilla_fossa_right_coll_130" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_130" />
+            <geom name="maxilla_fossa_right_coll_131" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_131" />
+            <geom name="maxilla_fossa_right_coll_132" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_132" />
+            <geom name="maxilla_fossa_right_coll_133" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_133" />
+            <geom name="maxilla_fossa_right_coll_134" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_134" />
+            <geom name="maxilla_fossa_right_coll_135" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_135" />
+            <geom name="maxilla_fossa_right_coll_136" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_136" />
+            <geom name="maxilla_fossa_right_coll_137" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_137" />
+            <geom name="maxilla_fossa_right_coll_138" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_138" />
+            <geom name="maxilla_fossa_right_coll_139" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_139" />
+            <geom name="maxilla_fossa_right_coll_140" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_140" />
+            <geom name="maxilla_fossa_right_coll_141" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_141" />
+            <geom name="maxilla_fossa_right_coll_142" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_142" />
+            <geom name="maxilla_fossa_right_coll_143" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_143" />
+            <geom name="maxilla_fossa_right_coll_144" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_144" />
+            <geom name="maxilla_fossa_right_coll_145" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_145" />
+            <geom name="maxilla_fossa_right_coll_146" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_146" />
+            <geom name="maxilla_fossa_right_coll_147" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_147" />
+            <geom name="maxilla_fossa_right_coll_148" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_148" />
+            <geom name="maxilla_fossa_right_coll_149" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_149" />
+            <geom name="maxilla_fossa_right_coll_150" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_150" />
+            <geom name="maxilla_fossa_right_coll_151" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_151" />
+            <geom name="maxilla_fossa_right_coll_152" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_152" />
+            <geom name="maxilla_fossa_right_coll_153" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_153" />
+            <geom name="maxilla_fossa_right_coll_154" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_154" />
+            <geom name="maxilla_fossa_right_coll_155" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_155" />
+            <geom name="maxilla_fossa_right_coll_156" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_156" />
+            <geom name="maxilla_fossa_right_coll_157" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_157" />
+            <geom name="maxilla_fossa_right_coll_158" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_158" />
+            <geom name="maxilla_fossa_right_coll_159" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_159" />
+            <geom name="maxilla_fossa_right_coll_160" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_160" />
+            <geom name="maxilla_fossa_right_coll_161" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_161" />
+            <geom name="maxilla_fossa_right_coll_162" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_162" />
+            <geom name="maxilla_fossa_right_coll_163" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_163" />
+            <geom name="maxilla_fossa_right_coll_164" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_164" />
+            <geom name="maxilla_fossa_right_coll_165" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_165" />
+            <geom name="maxilla_fossa_right_coll_166" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_166" />
+            <geom name="maxilla_fossa_right_coll_167" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_167" />
+            <geom name="maxilla_fossa_right_coll_168" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_168" />
+            <geom name="maxilla_fossa_right_coll_169" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_169" />
+            <geom name="maxilla_fossa_right_coll_170" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_170" />
+            <geom name="maxilla_fossa_right_coll_171" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_171" />
+            <geom name="maxilla_fossa_right_coll_172" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_172" />
+            <geom name="maxilla_fossa_right_coll_173" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_173" />
+            <geom name="maxilla_fossa_right_coll_174" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_174" />
+            <geom name="maxilla_fossa_right_coll_175" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_175" />
+            <geom name="maxilla_fossa_right_coll_176" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_176" />
+            <geom name="maxilla_fossa_right_coll_177" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_177" />
+            <geom name="maxilla_fossa_right_coll_178" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_178" />
+            <geom name="maxilla_fossa_right_coll_179" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_179" />
+            <geom name="maxilla_fossa_right_coll_180" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_180" />
+            <geom name="maxilla_fossa_right_coll_181" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_181" />
+            <geom name="maxilla_fossa_right_coll_182" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_182" />
+            <geom name="maxilla_fossa_right_coll_183" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_183" />
+            <geom name="maxilla_fossa_right_coll_184" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_184" />
+            <geom name="maxilla_fossa_right_coll_185" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_185" />
+            <geom name="maxilla_fossa_right_coll_186" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_186" />
+            <geom name="maxilla_fossa_right_coll_187" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_187" />
+            <geom name="maxilla_fossa_right_coll_188" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_188" />
+            <geom name="maxilla_fossa_right_coll_189" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_189" />
+            <geom name="maxilla_fossa_right_coll_190" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_190" />
+            <geom name="maxilla_fossa_right_coll_191" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_191" />
+            <geom name="maxilla_fossa_right_coll_192" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_192" />
+            <geom name="maxilla_fossa_right_coll_193" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_193" />
+            <geom name="maxilla_fossa_right_coll_194" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_194" />
+            <geom name="maxilla_fossa_right_coll_195" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_195" />
+            <geom name="maxilla_fossa_right_coll_196" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_196" />
+            <geom name="maxilla_fossa_right_coll_197" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_197" />
+            <geom name="maxilla_fossa_right_coll_198" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_198" />
+            <geom name="maxilla_fossa_right_coll_199" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_199" />
+            <geom name="maxilla_fossa_right_coll_200" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_200" />
+            <geom name="maxilla_fossa_right_coll_201" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_201" />
+            <geom name="maxilla_fossa_right_coll_202" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_202" />
+            <geom name="maxilla_fossa_right_coll_203" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_203" />
+            <geom name="maxilla_fossa_right_coll_204" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_204" />
+            <geom name="maxilla_fossa_right_coll_205" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_205" />
+            <geom name="maxilla_fossa_right_coll_206" class="collision"
+                mesh="maxilla_fossa_right_mesh_coll_206" />
+        </body>
+    </worldbody>
+</mujoco>

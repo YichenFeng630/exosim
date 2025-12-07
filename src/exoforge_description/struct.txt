@@ -1,0 +1,36 @@
+├── exosim_description/               # Robot models and descriptions
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── urdf/
+│   │   │   ├── exoskeleton_base.xacro     # Base URDF templates
+│   │   │   └── jaw_exoskeleton.xacro      # Jaw-specific URDF
+│   │   ├── mjcf/                          # MuJoCo model files
+│   │   │   ├── templates/
+│   │   │   │   ├── base_exoskeleton.xml
+│   │   │   │   └── human_model.xml
+│   │   │   ├── jaw_models/
+│   │   │   │   ├── jaw_exoskeleton.xml
+│   │   │   │   ├── tmj_anatomy.xml
+│   │   │   │   └── therapy_scenarios.xml
+│   │   │   └── validation/
+│   │   │       ├── simple_joint.xml
+│   │   │       └── contact_test.xml
+│   │   ├── meshes/
+│   │   │   ├── anatomical/
+│   │   │   │   ├── mandible.stl
+│   │   │   │   ├── maxilla.stl
+│   │   │   │   └── skull_base.stl
+│   │   │   ├── exoskeleton/
+│   │   │   │   ├── jaw_frame.stl
+│   │   │   │   └── actuator_housing.stl
+│   │   │   └── sensors/
+│   │   ├── textures/
+│   │   │   ├── skin.png
+│   │   │   ├── metal.jpg
+│   │   │   └── medical_plastic.png
+│   │   ├── rviz/
+│   │   │   ├── jaw_visualization.rviz
+│   │   │   └── therapy_session.rviz
+│   │   └── config/
+│   │       ├── joint_limits.yaml
+│   │       └── material_properties.yaml

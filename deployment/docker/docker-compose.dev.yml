@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  exosim-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.exosim
+      target: development
+    volumes:
+      - ../src:/workspace/src:rw
+      - ../build:/workspace/build:rw
+      - ../install:/workspace/install:rw
+      - ~/.ros:/root/.ros:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: bash
+
+  simulation:
+    extends: exosim-dev
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source install/setup.bash &&
+               ros2 launch exosim_simulation mujoco_simulation.launch.py"
+
+  testing:
+    extends: exosim-dev
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source install/setup.bash &&
+               colcon test --packages-select exosim_jaw &&
+               colcon test-result --verbose"
+

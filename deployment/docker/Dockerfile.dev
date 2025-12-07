@@ -1,0 +1,58 @@
+# Base development image
+FROM ros:jazzy-ros-base AS base
+SHELL ["/bin/bash", "-c"]
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-venv \
+    curl \
+    wget \
+    git \
+    cmake \
+    build-essential \
+    libeigen3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install MuJoCo
+RUN mkdir -p /opt/mujoco && \
+    wget https://github.com/deepmind/mujoco/releases/download/2.3.7/mujoco-2.3.7-linux-x86_64.tar.gz && \
+    tar -xzf mujoco-2.3.7-linux-x86_64.tar.gz -C /opt/mujoco && \
+    rm mujoco-2.3.7-linux-x86_64.tar.gz
+
+ENV MUJOCO_GL=egl
+ENV LD_LIBRARY_PATH="/opt/mujoco/mujoco-2.3.7/lib:$LD_LIBRARY_PATH"
+
+# Development stage with full toolchain
+FROM base AS development
+RUN apt-get update && apt-get install -y \
+    clang \
+    clang-tidy \
+    clang-format \
+    cppcheck \
+    valgrind \
+    gdb \
+    python3-pytest \
+    python3-pytest-cov \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up ROS workspace
+WORKDIR /workspace
+COPY src/ src/
+RUN source /opt/ros/jazzy/setup.bash && \
+    rosdep update && \
+    rosdep install --from-paths src --ignore-src -r -y
+
+# Build workspace
+RUN source /opt/ros/jazzy/setup.bash && \
+    colcon build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
+# Production stage - minimal runtime
+FROM base AS production
+COPY --from=development /workspace/install /workspace/install
+COPY --from=development /workspace/src /workspace/src
+
+WORKDIR /workspace
+CMD ["bash", "-c", "source /opt/ros/jazzy/setup.bash && \
+     source install/setup.bash && \
+     ros2 launch exosim_jaw jaw_therapy_session.launch.py"]

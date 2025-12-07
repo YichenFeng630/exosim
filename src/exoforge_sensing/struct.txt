@@ -1,0 +1,19 @@
+├── exosim_sensing/                   # Sensor integration
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── include/exosim_sensing/
+│   │   │   ├── sensor_manager.hpp
+│   │   │   ├── force_sensors.hpp
+│   │   │   ├── emg_processor.hpp
+│   │   │   └── imu_fusion.hpp
+│   │   ├── src/
+│   │   │   ├── sensor_manager.cpp
+│   │   │   ├── multi_modal_fusion.cpp
+│   │   │   └── calibration.cpp
+│   │   ├── config/
+│   │   │   ├── sensor_calibration.yaml
+│   │   │   └── jaw_sensors.yaml
+│   │   └── drivers/
+│   │       ├── force_sensor_driver.py
+│   │       ├── emg_driver.py
+│   │       └── jaw_position_sensor.py

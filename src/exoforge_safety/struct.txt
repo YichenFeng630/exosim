@@ -1,0 +1,23 @@
+├── exosim_safety/                    # Safety monitoring
+│   │   ├── package.xml
+│   │   ├── CMakeLists.txt
+│   │   ├── include/exosim_safety/
+│   │   │   ├── safety_monitor.hpp
+│   │   │   ├── force_limiter.hpp
+│   │   │   └── emergency_stop.hpp
+│   │   ├── src/
+│   │   │   ├── safety_monitor.cpp
+│   │   │   ├── force_limiter.cpp
+│   │   │   └── emergency_handler.cpp
+│   │   ├── exosim_safety/
+│   │   │   ├── __init__.py
+│   │   │   ├── safety_checks.py
+│   │   │   ├── medical_limits.py         # TMD safety limits
+│   │   │   └── monitoring.py
+│   │   ├── config/
+│   │   │   ├── safety_parameters.yaml
+│   │   │   ├── jaw_safety_limits.yaml
+│   │   │   └── emergency_procedures.yaml
+│   │   └── test/
+│   │       ├── test_safety_systems.cpp
+│   │       └── test_jaw_safety.py

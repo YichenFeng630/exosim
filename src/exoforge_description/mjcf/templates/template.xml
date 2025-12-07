@@ -1,0 +1,243 @@
+<mujoco model="ExampleModel">
+  <!-- Top-level model name shown in GUI title bar -->
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 0. SIZE: Memory allocation and array dimensions -->
+  <size
+    memory="-1"                     <!-- Memory allocation in MB (-1 = auto) (units: {K, M, G, T, P, E}) -->
+    nuserdata="0"                   <!-- User data size -->
+    nkey="0"                        <!-- Max number of key frames -->
+    nuser_body="-1"                 <!-- Number of user fields in body -->
+    nuser_jnt="-1"                  <!-- Number of user fields in joint -->
+    nuser_geom="-1"                 <!-- Number of user fields in geom -->
+    nuser_site="-1"                 <!-- Number of user fields in site -->
+    nuser_cam="-1"                  <!-- Number of user fields in camera -->
+    nuser_tendon="-1"               <!-- Number of user fields in tendon -->
+    nuser_actuator="-1"             <!-- Number of user fields in actuator -->
+    nuser_sensor="-1"               <!-- Number of user fields in sensor -->
+  />
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 1. OPTION: Simulation parameters (mjOption) -->
+  <option
+    timestep="0.002"                <!-- Simulation step size in seconds -->
+    apirate="100"                   <!-- API callback rate (Hz) -->
+    impratio="1"                    <!-- Friction-to-normal impedance ratio -->
+    gravity="0 0 -9.81"             <!-- Gravitational accel. vector -->
+    wind="0 0 0"                    <!-- Wind velocity vector -->
+    magnetic="0 -0.5 0"             <!-- Magnetic field vector -->
+    density="0"                     <!-- Fluid density (e.g., air ~1.2) -->
+    viscosity="0"                   <!-- Fluid viscosity (e.g., air ~0.00002) -->
+    o_margin="0"                    <!-- Global contact margin override -->
+    o_solref="0.02 1"               <!-- Contact solver parameters override (timeconst, dampratio) -->
+    o_solimp="0.9 0.95 0.001 0.5 2" <!-- Contact impedance override (d0_​, d_width​, width, midpoint, power) -->
+    o_friction="1 0.5 0.1"          <!-- Friction parameters override -->
+    integrator="implicitfast"       <!-- [Euler,RK4,implicit,implicitfast] -->
+    cone="elliptic"                 <!-- [pyramidal,elliptic] friction cone -->
+    jacobian="auto"                 <!-- [dense,sparse,auto] constraint jacobian -->
+    solver="Newton"                 <!-- [PGS,CG,Newton] constraint solver -->
+    iterations="100"                <!-- Max iterations for solver -->
+    tolerance="1e-8"                <!-- Early-termination tolerance -->
+    ls_iterations="50"              <!-- Linesearch iterations -->
+    ls_tolerance="0.01"             <!-- Linesearch tolerance -->
+    noslip_iterations="0"           <!-- Noslip solver iterations -->
+    noslip_tolerance="1e-6"         <!-- Noslip tolerance -->
+    ccd_iterations="50"             <!-- Convex CCD iterations -->
+    ccd_tolerance="1e-6"            <!-- CCD tolerance -->
+    sdf_iterations="10"             <!-- Signed-distance field iterations -->
+    sdf_initpoints="40"             <!-- SDF seed points -->
+    actuatorgroupdisable=""         <!-- Bitfield of disabled actuator groups -->
+  >
+    <!-- OPTION flags -->
+    <flag
+      constraint="enable"         <!-- Enable constraint solver -->
+      equality="enable"           <!-- Enable equality constraints -->
+      frictionloss="enable"       <!-- Enable friction loss computation -->
+      limit="enable"              <!-- Enable joint/geom limits -->
+      contact="enable"            <!-- Enable contact detection/response -->
+      passive="enable"            <!-- Enable passive forces (springs, dampers) -->
+      gravity="enable"            <!-- Enable gravitational forces -->
+      clampctrl="enable"          <!-- Clamp control inputs to actuator ranges -->
+      warmstart="enable"          <!-- Use previous solution as starting point -->
+      filterparent="enable"       <!-- Filter out parent-child collisions -->
+      actuation="enable"          <!-- Enable actuator forces -->
+      refsafe="enable"            <!-- Safe reference trajectory generation -->
+      sensor="enable"             <!-- Enable sensor computations -->
+      midphase="enable"           <!-- Enable midphase collision detection -->
+      nativeccd="disable"         <!-- Disable native continuous collision detection -->
+      eulerdamp="enable"          <!-- Enable Euler angle damping -->
+      autoreset="enable"          <!-- Auto-reset on numerical instability -->
+      override="disable"          <!-- Disable global parameter overrides -->
+      energy="disable"            <!-- Disable energy computation (performance) -->
+      fwdinv="disable"            <!-- Disable forward-inverse dynamics -->
+      invdiscrete="disable"       <!-- Disable inverse discrete dynamics -->
+      multiccd="disable"          <!-- Disable multi-body CCD -->
+      island="disable"            <!-- Disable constraint island optimization -->
+    />
+  </option>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 2. COMPILER: Parsing & compilation options -->
+  <compiler
+    autolimits="true"               <!-- Automatically compute joint limits from geometry -->
+    boundmass="0.001"               <!-- Minimum body mass (kg) -->
+    boundinertia="1e-6"             <!-- Minimum body inertia (kg⋅m²) -->
+    settotalmass="-1"               <!-- Set total model mass (-1 = use computed) -->
+    balanceinertia="false"          <!-- Balance inertia tensor automatically -->
+    strippath="false"               <!-- Strip path from mesh/texture filenames -->
+    coordinate="local"              <!-- [local,global] coordinate system -->
+    angle="degree"                  <!-- [degree,radian] angle units -->
+    fitaabb="false"                 <!-- Fit axis-aligned bounding box to meshes -->
+    eulerseq="xyz"                  <!-- Euler angle sequence for rotations -->
+    meshdir="../../meshes/"         <!-- Directory for mesh files -->
+    texturedir="../../textures/"    <!-- Directory for texture files -->
+    assetdir=""                     <!-- Directory for general assets -->
+    discardvisual="false"           <!-- Discard visual elements (performance) -->
+    usethread="true"                <!-- Use multithreading during compilation -->
+    fusestatic="false"              <!-- Fuse static bodies into world -->
+    inertiafromgeom="auto"          <!-- [true,false,auto] compute inertia from geometry -->
+    alignfree="true"                <!-- Align free joint reference frames -->
+    inertiagrouprange="0 5"         <!-- Range of inertia groups to process -->
+    saveinertial="false"            <!-- Save inertial properties to file -->
+  >
+    <!-- LENGTHRANGE settings - Controls muscle length calculations -->
+    <lengthrange
+      mode="muscle"                 <!-- [muscle,tendon] length range mode -->
+      useexisting="true"            <!-- Use existing length range if available -->
+      uselimit="false"              <!-- Use joint limits for length calculation -->
+      accel="20"                    <!-- Acceleration for length range computation -->
+      maxforce="0"                  <!-- Max force for length range (0 = no limit) -->
+      timeconst="1"                 <!-- Time constant for length dynamics -->
+      timestep="0.01"               <!-- Timestep for length range calculation -->
+      inttotal="10"                 <!-- Total integration steps -->
+      interval="2"                  <!-- Interval between length updates -->
+      tolrange="0.05"               <!-- Threshold for detecting divergence -->
+    />
+  </compiler>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 3. ASSETS: Meshes, textures, materials, skins, plugins -->
+  <asset>
+    <mesh name="robot_mesh" file="robot.obj" scale="1 1 1"/>       <!-- 3D geometry -->
+    <texture name="robot_tex" type="2d" file="robot.png"
+             width="1024" height="1024" />
+    <material name="robot_mat" texture="robot_tex"
+              rgba="1 1 1 1" specular="0.3" shininess="0.5"/>
+    <skin name="robot_skin" rgba="0.8 0.8 0.8 1" texrepeat="1 1"/>
+  </asset>
+  
+  <plugin file="custom_plugin.so" name="myPlugin">
+    <option name="param1" value="10"/>
+  </plugin>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 4. DEFAULTS: Cascading styleSheet–like settings -->
+  <default class="geom_defaults">
+    <geom density="1000" rgba="0.7 0.7 0.7 1" condim="3" solimp="0.9 0.95 0.001"/>
+  </default>
+  
+  <default class="joint_defaults">
+    <joint damping="1" limited="true" range="-90 90"/>
+  </default>
+  
+  <default class="actuator_defaults">
+    <velocity kp="0" kv="0" forcelimited="false"/>
+  </default>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 5. WORLDBODY: Kinematic/scene graph -->
+  <worldbody>
+    <!-- Static ground plane -->
+    <geom name="ground" type="plane" pos="0 0 0" size="0 0 0.1"
+          material="robot_mat"/>
+
+    <!-- A revolute-jointed body -->
+    <body name="link1" pos="0 0 0.2" euler="0 0 0">
+      <joint name="joint1" type="hinge" axis="0 1 0"
+             damping="0.1" limited="true" range="-45 45"/>
+      <geom name="link1_geom" type="box" size="0.1 0.05 0.02"
+            class="geom_defaults"/>
+      <site name="marker1" type="sphere" size="0.01" rgba="1 0 0 1"/>
+      <camera name="cam1" pos="0.2 0 0.1" xyaxes="1 0 0 0 0 1"/>
+      <light name="light1" pos="0 0 1" dir="0 0 -1"/>
+    </body>
+    
+    <!-- Another body with free joint -->
+    <body name="floating" pos="1 0 0">
+      <freejoint/>
+      <geom type="sphere" size="0.05"/>
+    </body>
+  </worldbody>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 6. CONTACT / EQUALITY: Constraint presets -->
+  <contact>
+    <exclude body1="link1" body2="floating"/>
+  </contact>
+  
+  <equality>
+    <connect joint1="joint1" joint2="joint1_copy" weight="1"/>
+  </equality>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 7. TENDONS: Rigid, spatial, fixed -->
+  <tendon>
+    <spatial name="tendon1" width="0.001" rgba="0 0 1 1">
+      <site site="marker1"/>
+      <site site="marker1" pos="0 0 0.1"/>
+    </spatial>
+    <fixed name="tendon2" width="0.001"/>
+  </tendon>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 8. ACTUATORS: Force, velocity, position, muscle, motor -->
+  <actuator>
+    <velocity name="vel_act" joint="joint1" kp="0" kv="10" ctrlrange="-5 5"/>
+    <position name="pos_act" joint="joint1" kp="100" kv="5" dampratio="1"/>
+    <muscle name="muscle1" tendon="tendon1" gaintype="muscle" biastype="muscle"
+            dynrange="0 1" gaintype="muscle" biastype="muscle"/>
+    <motor name="motor1" joint="joint1" gear="100"/>
+  </actuator>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 9. SENSORS: Joint, frame, accelerometer, force, custom -->
+  <sensor>
+    <jointpos name="qpos1" joint="joint1"/>
+    <jointvel name="qvel1" joint="joint1"/>
+    <framepos name="site_pos" site="marker1"/>
+    <framequat name="site_quat" site="marker1"/>
+    <accelerometer name="acc1" site="marker1" noise="0.01"/>
+    <force name="force1" site="marker1"/>
+    <torque name="torque1" site="marker1"/>
+    <velocimeter name="vel1" site="marker1"/>
+    <gyro name="gyro1" site="marker1"/>
+    <magnetometer name="mag1" site="marker1"/>
+    <user user="0" name="custom_sensor"/>
+  </sensor>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 10. VISUAL: Overlay HUD configuration -->
+  <visual>
+    <quality shadowsize="2048" fsaa="4" hdr="false"/>
+    <scale force="0.05" torque="0.01" width="800" height="600"/>
+  </visual>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 11. DEFAULT: Final cascading overrides (if needed) -->
+  <default class="final_overrides">
+    <geom friction="1 0.5 0.001" solimp="0.95 0.99 0.001"/>
+  </default>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 12. CUSTOM / EXTENSION: User-defined metadata -->
+  <custom>
+    <tuple name="meta1" value="example"/>
+  </custom>
+  
+  <extension name="myExtension" version="1.0"/>
+  
+  <!--────────────────────────────────────────────────────────────────────────-->
+  <!-- 13. INSTANCE: Modular MJCF includes -->
+  <instance name="submodel" file="submodel.xml"/>
+  
+</mujoco>

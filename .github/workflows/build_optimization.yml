@@ -1,0 +1,61 @@
+name: Optimized Build Pipeline
+on: #[push, pull_request]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ros_distro: [jazzy]
+        build_type: [Debug, Release, RelWithDebInfo]
+        
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.ros
+            /opt/ros/${{ matrix.ros_distro }}
+            build/
+          key: ${{ runner.os }}-ros-${{ matrix.ros_distro }}-${{ matrix.build_type }}-${{ hashFiles('**/package.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-ros-${{ matrix.ros_distro }}-${{ matrix.build_type }}-
+            ${{ runner.os }}-ros-${{ matrix.ros_distro }}-
+            
+      - name: Setup ROS2
+        uses: ros-tooling/setup-ros@v0.3
+        with:
+          required-ros-distributions: ${{ matrix.ros_distro }}
+          
+      - name: Install Dependencies
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          rosdep update
+          rosdep install --from-paths src --ignore-src -r -y
+          
+      - name: Build with Colcon
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          colcon build \
+            --cmake-args -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
+            --parallel-workers $(nproc) \
+            --event-handlers console_direct+
+            
+      - name: Run Tests
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          source install/setup.bash
+          colcon test --parallel-workers $(nproc)
+          colcon test-result --verbose
+          
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: test-results-${{ matrix.ros_distro }}-${{ matrix.build_type }}
+          path: |
+            build/*/test_results/
+            log/
+

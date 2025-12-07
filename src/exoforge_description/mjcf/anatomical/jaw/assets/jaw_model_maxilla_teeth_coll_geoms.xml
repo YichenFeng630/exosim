@@ -1,0 +1,169 @@
+<mujoco>
+    <compiler
+        meshdir="../../../../meshes/"
+        texturedir="../../../../textures/"
+    >
+    </compiler>
+
+    <default>
+        <default class="collision">
+            <geom
+                type="mesh"
+                group="3"
+                contype="1"
+                conaffinity="1"
+                condim="3"
+                rgba="0.5 0.5 0.5 0.5"
+                density="0"
+                friction="1 0.005 0.0001"
+                solref="0.02 1"
+                solimp="0.9 0.95 0.001 0.5 2"
+                margin="0"
+                gap="0"
+                pos="0 0 0.001"
+                quat="1 0 0 0"
+            />
+        </default>
+    </default>
+
+    <asset>
+        <!-- Collision meshes -->
+        <!-- Maxilla simplified - Teeth -->
+        <mesh name="maxilla_teeth_mesh_simplified_coll"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_plane_coll/maxilla_teeth_plane_coll_0.obj" />
+        <!-- Maxilla complex - Teeth -->
+        <mesh name="maxilla_teeth_mesh_coll_0"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_0.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_1"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_1.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_2"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_2.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_3"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_3.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_4"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_4.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_5"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_5.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_6"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_6.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_7"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_7.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_8"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_8.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_9"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_9.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_10"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_10.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_11"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_11.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_12"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_12.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_13"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_13.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_14"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_14.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_15"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_15.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_16"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_16.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_17"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_17.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_18"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_18.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_19"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_19.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_20"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_20.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_21"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_21.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_22"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_22.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_23"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_23.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_24"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_24.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_25"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_25.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_26"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_26.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_27"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_27.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_28"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_28.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_29"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_29.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_30"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_30.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_31"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_31.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_32"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_32.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_33"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_33.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_34"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_34.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_35"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_35.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_36"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_36.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_37"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_37.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_38"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_38.obj" />
+        <mesh name="maxilla_teeth_mesh_coll_39"
+            file="anatomical/jaw/collision/CoACD/maxilla_teeth_coll/maxilla_teeth_coll_39.obj" />
+    </asset>
+
+    <worldbody>
+        <body name="maxilla_teeth_coll_geoms" childclass="collision">
+            <inertial pos="0 0 0" mass="0" />
+
+            <!-- <geom
+                name="maxilla_teeth_simplified_coll"
+                class="collision"
+                mesh="maxilla_teeth_mesh_simplified_coll"
+                pos="0 0 0.002"
+            /> -->
+            <geom name="maxilla_teeth_coll_0" class="collision" mesh="maxilla_teeth_mesh_coll_0" />
+            <geom name="maxilla_teeth_coll_1" class="collision" mesh="maxilla_teeth_mesh_coll_1" />
+            <geom name="maxilla_teeth_coll_2" class="collision" mesh="maxilla_teeth_mesh_coll_2" />
+            <geom name="maxilla_teeth_coll_3" class="collision" mesh="maxilla_teeth_mesh_coll_3" />
+            <geom name="maxilla_teeth_coll_4" class="collision" mesh="maxilla_teeth_mesh_coll_4" />
+            <geom name="maxilla_teeth_coll_5" class="collision" mesh="maxilla_teeth_mesh_coll_5" />
+            <geom name="maxilla_teeth_coll_6" class="collision" mesh="maxilla_teeth_mesh_coll_6" />
+            <geom name="maxilla_teeth_coll_7" class="collision" mesh="maxilla_teeth_mesh_coll_7" />
+            <geom name="maxilla_teeth_coll_8" class="collision" mesh="maxilla_teeth_mesh_coll_8" />
+            <geom name="maxilla_teeth_coll_9" class="collision" mesh="maxilla_teeth_mesh_coll_9" />
+            <geom name="maxilla_teeth_coll_10" class="collision" mesh="maxilla_teeth_mesh_coll_10" />
+            <geom name="maxilla_teeth_coll_11" class="collision" mesh="maxilla_teeth_mesh_coll_11" />
+            <geom name="maxilla_teeth_coll_12" class="collision" mesh="maxilla_teeth_mesh_coll_12" />
+            <geom name="maxilla_teeth_coll_13" class="collision" mesh="maxilla_teeth_mesh_coll_13" />
+            <geom name="maxilla_teeth_coll_14" class="collision" mesh="maxilla_teeth_mesh_coll_14" />
+            <geom name="maxilla_teeth_coll_15" class="collision" mesh="maxilla_teeth_mesh_coll_15" />
+            <geom name="maxilla_teeth_coll_16" class="collision" mesh="maxilla_teeth_mesh_coll_16" />
+            <geom name="maxilla_teeth_coll_17" class="collision" mesh="maxilla_teeth_mesh_coll_17" />
+            <geom name="maxilla_teeth_coll_18" class="collision" mesh="maxilla_teeth_mesh_coll_18" />
+            <geom name="maxilla_teeth_coll_19" class="collision" mesh="maxilla_teeth_mesh_coll_19" />
+            <geom name="maxilla_teeth_coll_20" class="collision" mesh="maxilla_teeth_mesh_coll_20" />
+            <geom name="maxilla_teeth_coll_21" class="collision" mesh="maxilla_teeth_mesh_coll_21" />
+            <geom name="maxilla_teeth_coll_22" class="collision" mesh="maxilla_teeth_mesh_coll_22" />
+            <geom name="maxilla_teeth_coll_23" class="collision" mesh="maxilla_teeth_mesh_coll_23" />
+            <geom name="maxilla_teeth_coll_24" class="collision" mesh="maxilla_teeth_mesh_coll_24" />
+            <geom name="maxilla_teeth_coll_25" class="collision" mesh="maxilla_teeth_mesh_coll_25" />
+            <geom name="maxilla_teeth_coll_26" class="collision" mesh="maxilla_teeth_mesh_coll_26" />
+            <geom name="maxilla_teeth_coll_27" class="collision" mesh="maxilla_teeth_mesh_coll_27" />
+            <geom name="maxilla_teeth_coll_28" class="collision" mesh="maxilla_teeth_mesh_coll_28" />
+            <geom name="maxilla_teeth_coll_29" class="collision" mesh="maxilla_teeth_mesh_coll_29" />
+            <geom name="maxilla_teeth_coll_30" class="collision" mesh="maxilla_teeth_mesh_coll_30" />
+            <geom name="maxilla_teeth_coll_31" class="collision" mesh="maxilla_teeth_mesh_coll_31" />
+            <geom name="maxilla_teeth_coll_32" class="collision" mesh="maxilla_teeth_mesh_coll_32" />
+            <geom name="maxilla_teeth_coll_33" class="collision" mesh="maxilla_teeth_mesh_coll_33" />
+            <geom name="maxilla_teeth_coll_34" class="collision" mesh="maxilla_teeth_mesh_coll_34" />
+            <geom name="maxilla_teeth_coll_35" class="collision" mesh="maxilla_teeth_mesh_coll_35" />
+            <geom name="maxilla_teeth_coll_36" class="collision" mesh="maxilla_teeth_mesh_coll_36" />
+            <geom name="maxilla_teeth_coll_37" class="collision" mesh="maxilla_teeth_mesh_coll_37" />
+            <geom name="maxilla_teeth_coll_38" class="collision" mesh="maxilla_teeth_mesh_coll_38" />
+            <geom name="maxilla_teeth_coll_39" class="collision" mesh="maxilla_teeth_mesh_coll_39" />
+        </body>
+    </worldbody>
+</mujoco>

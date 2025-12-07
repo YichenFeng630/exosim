@@ -1,0 +1,298 @@
+<mujoco model="JawSkinModel_v1.0.0">
+
+  <!-- 0. SIZE: Memory allocation and array dimensions -->
+  <size
+    memory="-1"
+    nuserdata="0"
+    nkey="0"
+    nuser_body="-1"
+    nuser_jnt="-1"
+    nuser_geom="-1"
+    nuser_site="-1"
+    nuser_cam="-1"
+    nuser_tendon="-1"
+    nuser_actuator="-1"
+    nuser_sensor="-1"
+  />
+
+  <option
+    timestep="5.0e-4"
+    apirate="100"
+    impratio="1"
+    gravity="0 0 -9.81"
+    wind="0 0 0"
+    magnetic="0 -0.5 0"
+    density="0"
+    viscosity="0"
+    o_margin="0"
+    o_solref="0.02 1"
+    o_solimp="0.9 0.95 0.001 0.5 2"
+    o_friction="1 0.005 0.0001"
+    integrator="implicitfast"
+    cone="elliptic"
+    jacobian="auto"
+    solver="Newton"
+    iterations="100"
+    tolerance="1e-8"
+    ls_iterations="50"
+    ls_tolerance="0.01"
+    noslip_iterations="0"
+    noslip_tolerance="1e-6"
+    ccd_iterations="50"
+    ccd_tolerance="1e-6"
+    sdf_iterations="10"
+    sdf_initpoints="40"
+    actuatorgroupdisable=""
+  >
+    <!-- OPTION flags - Controls various simulation features -->
+    <flag
+      constraint="enable"
+      equality="enable"
+      frictionloss="enable"
+      limit="enable"
+      contact="enable"
+      spring="enable"
+      gravity="enable"
+      clampctrl="enable"
+      warmstart="enable"
+      filterparent="enable"
+      actuation="enable"
+      refsafe="enable"
+      sensor="enable"
+      midphase="enable"
+      nativeccd="enable"
+      eulerdamp="enable"
+      autoreset="enable"
+      override="disable"
+      energy="disable"
+      fwdinv="disable"
+      invdiscrete="disable"
+      multiccd="disable"
+      island="disable"
+    />
+  </option>
+
+  <!-- COMPILER settings - Controls model compilation and processing -->
+  <compiler
+    autolimits="true"
+    boundmass="0"
+    boundinertia="0"
+    settotalmass="-1"
+    balanceinertia="false"
+    strippath="false"
+    coordinate="local"
+    angle="degree"
+    fitaabb="false"
+    eulerseq="xyz"
+    meshdir="../../../meshes/"
+    texturedir="../../../textures/"
+    assetdir="assets/"
+    discardvisual="false"
+    usethread="true"
+    fusestatic="false"
+    inertiafromgeom="auto"
+    alignfree="true"
+    inertiagrouprange="0 5"
+    saveinertial="false"
+  >
+    <!-- LENGTHRANGE settings - Controls muscle length calculations -->
+    <lengthrange
+      mode="muscle"
+      useexisting="true"
+      uselimit="false"
+      accel="50"
+      maxforce="0"
+      timeconst="0.1"
+      timestep="0.005"
+      inttotal="20"
+      interval="2"
+      tolrange="0.05"
+    />
+  </compiler>
+
+  <visual>
+    <global
+      orthographic="false"
+      fovy="35"
+      azimuth="225"
+      elevation="0"
+      realtime="1"
+      offwidth="640"
+      offheight="480"
+      ellipsoidinertia="true"
+      bvactive="false"
+    />
+    <headlight diffuse="1 1 1" />
+    <scale
+      forcewidth="0.01"
+      contactwidth="0.001"
+      contactheight="0.1"
+      com="0.1"
+      camera="0.1"
+      light="0.1"
+      jointlength="1"
+      jointwidth="0.01"
+      actuatorwidth="0.075"
+      framelength="0.2"
+      framewidth="0.02"
+      constraint="0.1"
+    />
+  </visual>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <!-- Assets -->
+  <asset>
+
+    <model name="jaw_model_rigid" file="jaw_model_rigid.xml" />
+
+    <!-- Materials -->
+    <!-- <material name="bone_material" rgba="0.5 0.5 0.5 1.0" /> -->
+
+    <!-- Visualization meshes -->
+    <mesh name="head_shoulder_skin" file="anatomical/jaw/skin/head_shoulder_skin.obj" />
+
+    <!-- <model name="jaw_model_maxilla_teeth_coll_geoms"
+      file="assets/jaw_model_maxilla_teeth_coll_geoms.xml" /> -->
+
+  </asset>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <default>
+
+    <default class="skin">
+      <tendon
+        width="0.001"
+        rgba=".95 .3 .3 1"
+        limited="false"
+      />
+
+      <default class="skin_collision">
+        <geom
+          type="mesh"
+          group="3"
+          contype="1"
+          conaffinity="1"
+          condim="3"
+          rgba="0.5 0.5 0.5 0.5"
+          density="0"
+          friction="1 0.005 0.0001"
+          solref="0.02 1"
+          solimp="0.9 0.95 0.001 0.5 2"
+          margin="0"
+          gap="0"
+          pos="0 0 0"
+          quat="1 0 0 0"
+        />
+      </default>
+    </default>
+
+  </default>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <worldbody>
+
+    <!-- <body name="ground" pos="0 0 0">
+      <geom
+        name="ground_plane"
+        type="plane"
+        size="0.5 0.5 0.005"
+        pos="0 0 -0.165"
+        rgba="0.6 0.6 0.6 1"
+        contype="1"
+        conaffinity="1"
+        condim="3"
+        friction="1 0.005 0.0001"
+        solref="0.02 2"
+        solimp="0.0 0.95 0.001 0.5 2"
+      />
+    </body> -->
+
+    <body name="jaw_model_rigid" pos="0 0 0" quat="1 0 0 0">
+      <attach model="jaw_model_rigid" body="skull" prefix="_" />
+    </body>
+
+    <body name="jaw_skin" childclass="skin" pos="0 0 0" quat="1 0 0 0">
+      <geom
+        name="head_shoulder_skin_vis"
+        type="mesh"
+        mesh="head_shoulder_skin"
+        rgba="0.8 0.8 0.8 0.5"
+        contype="0"
+        conaffinity="0"
+        group="4"
+      />
+
+      <flexcomp
+        name="jaw_skin_flexcomp"
+        dim="2"
+        dof="full"
+        type="mesh"
+        mass="0.04516"
+        inertiabox="0.005"
+        file="anatomical/jaw/skin/face_skin.obj"
+        pos="0 0 0"
+        quat="1 0 0 0"
+        radius="1.3e-3"
+        rgba="1.0 0.85 0.74 0.75"
+        rigid="false"
+      >
+        <contact
+          internal="false"
+          selfcollide="none"
+          vertcollide="false"
+          activelayers="1"
+          contype="1"
+          conaffinity="1"
+          condim="3"
+          friction="0.1 0.005 0.0001"
+          solref="0.01 1.5"
+          solimp="0.0 0.95 0.001 0.5 3"
+          priority="1"
+          margin="0"
+          gap="0"
+        />
+
+        <!-- delta_t le 1e-7 -->
+        <!-- <elasticity
+          young="1e3"
+          poisson="0.3"
+          damping="63"
+          thickness="2.6e-3"
+          elastic2d="both"
+        /> -->
+
+        <!-- Either edge=true and damping=0 or 
+         edge=false, damping>0, and Solid or Membrane plugin with stiffness>0 -->
+        <edge
+          equality="true"
+          solref="-1e6 -2e3"
+          solimp="0.95 0.99 0.001 0.5 6"
+          damping="1"
+        />
+
+        <pin
+          id="1 2 3 6 7 11 12 15 21 22 23 24 25 26 27 28 29 30 31 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 
+          257 258 284 285 286 318 328 329 331 332 335 336 339 340 341 342 343 344 345 346 347 348 349 393 394 395 
+          396 397 398 399 400 401 402 403 404 405 406 407 408 566 567 591 592 593 618"
+        />
+      </flexcomp>
+    </body>
+
+  </worldbody>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <tendon>
+
+  </tendon>
+
+  <!--────────────────────────────────────────────────────────────────────────-->
+
+  <actuator>
+
+  </actuator>
+
+</mujoco>

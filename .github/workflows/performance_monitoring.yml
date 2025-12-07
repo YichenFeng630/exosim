@@ -1,0 +1,51 @@
+name: Performance Monitoring
+on:
+  #schedule:
+  #  - cron: '0 0 * * *'  # Daily performance tests
+  workflow_dispatch:
+
+jobs:
+  performance_benchmarks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Performance Testing Environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y stress-ng htop
+          
+      - name: Build Optimized Version
+        run: |
+          docker build -f docker/Dockerfile.exosim \
+            --target production \
+            --build-arg CMAKE_BUILD_TYPE=Release \
+            -t exosim:performance .
+            
+      - name: Run Performance Tests
+        run: |
+          # Memory usage test
+          docker run --rm -v $(pwd)/results:/results \
+            exosim:performance bash -c "
+            source install/setup.bash &&
+            timeout 300 ros2 run exosim_jaw performance_test.py \
+              --iterations=1000 --log-file=/results/memory_test.log"
+          
+          # CPU utilization test  
+          docker run --rm -v $(pwd)/results:/results \
+            exosim:performance bash -c "
+            source install/setup.bash &&
+            timeout 300 ros2 launch exosim_simulation \
+              performance_benchmark.launch.py \
+              --log-file=/results/cpu_test.log"
+              
+      - name: Analyze Performance Metrics
+        run: |
+          python3 scripts/analyze_performance.py results/
+          
+      - name: Upload Performance Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-report
+          path: results/performance_report.html
+
