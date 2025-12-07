@@ -1,0 +1,248 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                   ERG PLUGIN - FINAL QUICK REFERENCE                        ║
+║                      重构后的项目快速参考                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 项目结构 (Project Structure)
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─ 插件核心 (Plugin Core) ────────────────────────────────────────────────────┐
+│                                                                               │
+│  erg_plugin_core.py       → ErgFilter 信号处理核心                           │
+│  erg_plugin.py            → ErgPlugin 主接口                                 │
+│  erg_recorder.py          → ErgRecorder 数据录制                             │
+│  erg_visualization.py     → plot_* 离线绘图函数                              │
+│                                                                               │
+│  这四个文件包含所有核心功能，可独立使用                                      │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌─ 演示模块 (Demonstration) ──────────────────────────────────────────────────┐
+│                                                                               │
+│  viewer_realtime_plot.py  → 实时 MuJoCo + matplotlib 演示                   │
+│                                                                               │
+│  使用: python viewer_realtime_plot.py                                        │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+┌─ 测试模块 (Testing) ────────────────────────────────────────────────────────┐
+│                                                                               │
+│  test.py                  → 完整测试框架                                      │
+│                                                                               │
+│  使用: python test.py                                                        │
+│       选择肌肉 → 生成数据 → 保存文件 → 绘图                                  │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+
+🚀 快速开始 (Quick Start)
+═══════════════════════════════════════════════════════════════════════════════
+
+1️⃣ 运行测试
+   
+   cd /home/yichen/exoforge-feature-sensors-user-intent/src/exoforge_pligin
+   python test.py
+
+2️⃣ 选择肌肉 (Multiple formats supported)
+
+   0                          → 选择第一个肌肉
+   0,2,4                      → 选择多个肌肉
+   superficial_masseter_left  → 按名称选择
+   
+3️⃣ 查看结果
+
+   ls erg_test/
+   # 查看生成的数据和图表
+
+
+💾 输出文件说明 (Output Files)
+═══════════════════════════════════════════════════════════════════════════════
+
+erg_test/
+└── superficial_20251207_165939/
+    │
+    ├── *.npz                           (压缩数据 / Compressed data)
+    │   内容: time_array, erg_signal, activation, force
+    │   优点: 大小小 (40-60% 压缩率)，浮点精度高
+    │
+    ├── *.csv                           (文本数据 / Text data)
+    │   格式: time,erg_signal,activation,force
+    │   优点: 可读性强，可用 Excel 打开
+    │   大小: 较大 (~550 KB)
+    │
+    └── plots/
+        ├── *_erg_signal.png            (ERG 信号详细分析)
+        │   3 面板: ERG, Activation, Force
+        │   支持可选缩放窗口
+        │
+        ├── *_time_series.png           (时间序列图)
+        │   3 面板: Activation, Force, ERG
+        │   完整 30 秒数据
+        │
+        └── multi_muscle_comparison.png (多肌肉对比，可选)
+            N 行子图，每行一个肌肉
+            仅在选择多个肌肉时生成
+
+
+📊 数据规格 (Data Specifications)
+═══════════════════════════════════════════════════════════════════════════════
+
+仿真参数 / Simulation Parameters:
+  - 采样率 (Sample rate):     500 Hz (dt = 0.002 s)
+  - 仿真时长 (Duration):      30 秒
+  - 采样点数 (Data points):   15000
+  - 激活范围 (Activation):    [0.0, 1.0]
+  - 力范围 (Force):           [0.8, 1.2] N (模拟)
+
+ERG 处理参数 / ERG Filter Parameters:
+  - 压缩系数 (k):             3.0 (非线性强度)
+  - 力权重 (alpha):           0.2 (力的影响)
+  - 噪声标准差 (noise_std):   0.02 (生物噪声)
+  - 高通系数 (a_hp):          0.995 (DC 移除强度)
+  - 低通系数 (a_lp):          0.90 (平滑程度)
+
+输出数据大小 / File Sizes:
+  - 单肌肉 NPZ:  ~380 KB
+  - 单肌肉 CSV:  ~550 KB
+  - 单 PNG:      ~190-240 KB
+  - 双肌肉总计:  ~1.8 MB
+
+
+🎯 使用模式 (Usage Patterns)
+═══════════════════════════════════════════════════════════════════════════════
+
+模式 1: 快速测试
+   echo "0" | python test.py
+   # 30 秒内生成完整数据
+
+模式 2: 多肌肉对比
+   echo "0,1,2" | python test.py
+   # 生成 3 个肌肉的数据和对比图
+
+模式 3: 编程 API 使用
+   
+   from erg_plugin_core import ErgFilter
+   from erg_recorder import ErgRecorder
+   
+   filter = ErgFilter()
+   recorder = ErgRecorder("muscle_name")
+   
+   for step in range(15000):
+       erg = filter.step(activation=0.5, force=1.0)
+       recorder.record_step(t=step*0.002, erg=erg, act=0.5, force=1.0)
+   
+   recorder.save_npz("erg_test")
+   recorder.save_csv("erg_test")
+
+模式 4: 实时演示
+   python viewer_realtime_plot.py
+   # 使用 MuJoCo Viewer + matplotlib 实时显示
+
+
+📦 核心 API (Core API)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. ErgFilter (erg_plugin_core.py)
+   
+   filter = ErgFilter(k=3.0, alpha=0.2, noise_std=0.02, ...)
+   erg = filter.step(activation=0.5, force=1.0)
+   filter.reset()
+
+2. ErgRecorder (erg_recorder.py)
+   
+   rec = ErgRecorder("muscle_name")
+   rec.record_step(t=0.002, erg=0.15, act=0.5, force=1.0)
+   rec.save_npz("output_dir")
+   rec.save_csv("output_dir")
+
+3. MultiMuscleRecorder (erg_recorder.py)
+   
+   rec = MultiMuscleRecorder(["m1", "m2"])
+   rec.record_step(t=0.002, muscle_data={"m1": (erg1, a1, f1), ...})
+   files = rec.save_all("output_dir")  # NPZ + CSV
+
+4. Plotting (erg_visualization.py)
+   
+   plot_erg_signal(recorder, window=None, save_path="plot.png")
+   plot_multi_erg(recorders_dict, save_path="plot.png")
+   plot_comparison(rec1, rec2, save_path="plot.png")
+   quick_plot(recorder, show_activation=True, show_force=True)
+
+
+🔍 数据检查 (Data Inspection)
+═══════════════════════════════════════════════════════════════════════════════
+
+查看 NPZ 文件内容:
+   
+   import numpy as np
+   data = np.load("erg_test/muscle_name_erg.npz")
+   print(data.files)  # ['time_array', 'erg_signal', 'activation', 'force']
+   time = data['time_array']
+   erg = data['erg_signal']
+
+查看 CSV 文件:
+   
+   import pandas as pd
+   df = pd.read_csv("erg_test/muscle_name_erg.csv")
+   print(df.head())
+   print(f"Shape: {df.shape}")
+
+
+⚙️ 配置和参数 (Configuration)
+═══════════════════════════════════════════════════════════════════════════════
+
+修改 test.py 中的模拟参数:
+   
+   controller.run_simulated_session(duration=60.0)  # 改成 60 秒
+   
+修改 ErgFilter 参数:
+   
+   filter = ErgFilter(
+       k=3.0,        # 非线性强度 (1.0-5.0)
+       alpha=0.2,    # 力权重 (0.0-1.0)
+       noise_std=0.02,  # 噪声强度 (0.0-0.1)
+       a_hp=0.995,   # 高通强度 (0.9-0.999)
+       a_lp=0.90,    # 低通平滑 (0.5-0.99)
+       fmax=1.0      # 力归一化 (>0)
+   )
+
+
+❓ 常见问题 (FAQ)
+═══════════════════════════════════════════════════════════════════════════════
+
+Q: 如何选择多个肌肉?
+A: 输入 0,2,4 或 0,1,2,3,4,5 等逗号分隔的索引
+
+Q: 如何使用自己的激活和力数据?
+A: 修改 test.py 中的 activation_patterns 和 force_patterns
+
+Q: 如何改变仿真时长?
+A: 修改 controller.run_simulated_session(duration=X)
+
+Q: 如何离线使用（无图形显示）?
+A: erg_visualization 已支持离线模式，设置 save_path 即可
+
+Q: NPZ vs CSV 应该用哪个?
+A: NPZ 更小更快 (处理用)，CSV 更易读 (分析用)
+
+Q: 怎样修改 ERG 处理参数?
+A: 在 ErgFilter() 初始化时改参数，或 test.py 中修改默认值
+
+
+📞 文档位置 (Documentation)
+═══════════════════════════════════════════════════════════════════════════════
+
+README.md               - 项目概览
+RESTRUCTURING_SUMMARY.md - 重构说明 (你在这里)
+ARCHITECTURE.md         - 详细架构说明
+QUICK_START.txt         - 快速开始指南
+TEST_GUIDE.md           - 测试详细指南
+TEST_SUMMARY.md         - 测试功能总结
+FILES_MANIFEST.md       - 文件清单
+
+
+═══════════════════════════════════════════════════════════════════════════════
+最后更新 / Last updated: 2025-12-07
+状态 / Status: ✅ 重构完成 (Restructuring Complete)
+═══════════════════════════════════════════════════════════════════════════════
